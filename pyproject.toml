@@ -1,0 +1,20 @@
+[tool.black]
+force-exclude = '''
+(
+  /(
+      \.git
+    | \.mypy_cache
+    | \.venv
+    | \.DS_Store
+    | \.idea
+    | migrations
+    | build
+    | dist
+  )/
+)
+'''
+line-length = 79
+skip-string-normalization = true
+
+[tool.isort]
+profile="google"
