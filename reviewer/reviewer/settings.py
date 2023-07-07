@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # installed apps
     'sorl.thumbnail',
+    'widget_tweaks',
     # created apps
     'homepage.apps.HomepageConfig',
     'users.apps.UsersConfig',

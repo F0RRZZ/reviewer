@@ -88,7 +88,6 @@ class User(
 
     EMAIL_FIELD = 'email'
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = [EMAIL_FIELD]
 
     class Meta:
         verbose_name = 'user'

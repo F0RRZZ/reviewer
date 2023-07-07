@@ -36,10 +36,11 @@ class UserManager(django.contrib.auth.models.BaseUserManager):
             id=pk,
         )
 
-    def user_profile(self):
+    def get_user_profile(self):
         return self.get_queryset().only(
             users.models.User.email.field.name,
             users.models.User.username.field.name,
             users.models.User.bio.field.name,
             users.models.User.image.field.name,
+            users.models.User.date_joined.field.name,
         )
