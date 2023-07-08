@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # installed apps
+    'django_cleanup.apps.CleanupConfig',
     'sorl.thumbnail',
     'widget_tweaks',
     # created apps
@@ -53,6 +54,10 @@ if DEBUG:
         'debug_toolbar.middleware.DebugToolbarMiddleware',
     ]
 
+INTERNAL_IPS = [
+    '127.0.0.1',
+    'localhost',
+]
 
 ROOT_URLCONF = 'reviewer.urls'
 
@@ -128,3 +133,5 @@ LOGOUT_REDIRECT_URL = '/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.User'
+
+THUMBNAIL_DEBUG = True

@@ -66,9 +66,7 @@ urlpatterns = [
     ),
     django.urls.path(
         'profile/<str:username>/',
-        django.contrib.auth.views.PasswordResetCompleteView.as_view(
-            template_name='users/reset_password_complete.html',
-        ),
+        users.views.ProfileView.as_view(),
         name='profile',
     ),
 ]
