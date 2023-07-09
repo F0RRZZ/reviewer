@@ -2,10 +2,9 @@ import django.conf
 import django.conf.urls.static
 import django.contrib.admin
 import django.urls
-import homepage.views
 
 urlpatterns = [
-    django.urls.path('', homepage.views.HomepageView.as_view()),
+    django.urls.path('', django.urls.include('feeds.urls', namespace='feeds')),
     django.urls.path(
         'user/', django.urls.include('users.urls', namespace='users')
     ),

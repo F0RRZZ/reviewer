@@ -1,5 +1,3 @@
-import os
-
 import django.contrib.auth.models
 import django.db.models
 
