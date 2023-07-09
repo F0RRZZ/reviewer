@@ -23,7 +23,7 @@ class ProfileForm(core.mixins.BootstrapFormMixin, django.forms.ModelForm):
     image = django.forms.ImageField(
         label='Avatar',
         required=False,
-        error_messages={'invalid': "Image files only"},
+        error_messages={'invalid': 'Image files only'},
         widget=django.forms.FileInput,
     )
 

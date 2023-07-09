@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ user.username }}'s profile{% endblock %}
+{% block title %}{{ profile_owner.username }}'s profile{% endblock %}
 
 {% block content %}
 {% if user.id == profile_owner.id %}
@@ -17,5 +17,19 @@
     <input type="submit" value="Submit" class="btn btn-primary" style="margin-left: 300px; margin-right: 300px;">
 </form>
 {% else %}
+<div class="profile" style="padding-left: 300px; padding-right: 300px;">
+    <img src="{{ profile_owner.get_image_300x300 }}" width="300" height="300" style="border: 1px solid black"/><br/>
+    <div class="render_username" style="display: flex; flex-direction: row;">
+        {% if profile_owner.is_staff%}
+        <h3>{{ profile_owner.username }} <span class="tag tag-primary">STAFF</span></h3>
+        {% else %}
+        <h3>{{ profile_owner.username }}</h3>
+        {% endif %}
+    </div>
+    <p>Date joined: {{ profile_owner.date_joined }}</p>
+    {% if profile_owner.bio %}
+    <p>Bio: {{ profile_owner.bio }}</p>
+    {% endif %}
+</div>
 {% endif %}
 {% endblock %}

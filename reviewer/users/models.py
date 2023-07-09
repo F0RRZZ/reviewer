@@ -60,9 +60,8 @@ class User(
 
     objects = users.managers.UserManager()
 
-    def get_image_path(self, filename: str):
-        extension = filename.split('.')[-1]
-        return f'avatars/user_{self.id}.{extension}'
+    def get_image_path(self, filename: str) -> str:
+        return f'avatars/user_{self.id}/{filename}'
 
     image = django.db.models.ImageField(
         'avatar',
