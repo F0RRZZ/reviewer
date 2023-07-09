@@ -1,3 +1,18 @@
-from django.contrib import admin
+import django.contrib.admin
 
-# Register your models here.
+import movies.models
+
+
+@django.contrib.admin.register(movies.models.Movie)
+class MoviesAdmin(django.contrib.admin.ModelAdmin):
+    fields = (
+        movies.models.Movie.name.field.name,
+        movies.models.Movie.description.field.name,
+        movies.models.Movie.image.field.name,
+        movies.models.Movie.created_at.field.name,
+    )
+    list_display = (
+        movies.models.Movie.name.field.name,
+        movies.models.Movie.created_at.field.name,
+        movies.models.Movie.image_tmb,
+    )

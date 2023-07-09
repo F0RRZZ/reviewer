@@ -1,4 +1,5 @@
 import django.db.models
+import django.utils.safestring
 
 import core.base_models
 import core.mixins
@@ -43,3 +44,17 @@ class Movie(core.base_models.NameFormatterBaseModel, core.mixins.ImageMixin):
     class Meta:
         verbose_name = 'movie'
         verbose_name_plural = 'movies'
+
+    def __str__(self):
+        return self.name[:30]
+
+    def image_tmb(self):
+        if self.image:
+            image_url = self.image.url
+            return django.utils.safestring.mark_safe(
+                f'<img src="{image_url}" width="50" height="50"/>'
+            )
+        return 'no_photo'
+
+    image_tmb.short_description = 'image'
+    image_tmb.allow_tags = True
