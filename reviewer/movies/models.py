@@ -3,6 +3,7 @@ import django.utils.safestring
 
 import core.base_models
 import core.mixins
+import genres.models
 import movies.managers
 
 
@@ -18,6 +19,9 @@ class Movie(core.base_models.NameFormatterBaseModel, core.mixins.ImageMixin):
     )
     description = django.db.models.TextField(
         'description', max_length=1000, help_text='Maximum of 1000 symbols'
+    )
+    genre = django.db.models.ManyToManyField(
+        genres.models.Genre,
     )
 
     def get_image_path(self, filename: str) -> str:

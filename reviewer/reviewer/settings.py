@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'widget_tweaks',
     # created apps
+    'genres.apps.GenresConfig',
     'feeds.apps.FeedsConfig',
     'movies.apps.MoviesConfig',
     'users.apps.UsersConfig',

@@ -9,8 +9,10 @@ class MoviesAdmin(django.contrib.admin.ModelAdmin):
         movies.models.Movie.name.field.name,
         movies.models.Movie.description.field.name,
         movies.models.Movie.image.field.name,
+        movies.models.Movie.genre.field.name,
         movies.models.Movie.created_at.field.name,
     )
+    filter_horizontal = (movies.models.Movie.genre.field.name,)
     list_display = (
         movies.models.Movie.name.field.name,
         movies.models.Movie.created_at.field.name,

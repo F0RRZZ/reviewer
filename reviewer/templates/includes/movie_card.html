@@ -1,0 +1,10 @@
+<div class="col-sm-4">
+    <div class="card">
+        <img class="card-img-top" src="{{ movie.get_image_300x300 }}" alt="Image" />
+        <div class="card-body">
+            <h5 class="card-title">{{ movie.name }}</h5>
+            <p class="card-text">{{ movie.description | truncatechars:50 }}</p>
+            <a href="#" class="btn btn-primary">Отзывы</a>
+        </div>
+    </div>
+</div>

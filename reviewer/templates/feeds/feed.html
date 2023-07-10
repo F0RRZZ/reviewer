@@ -3,4 +3,11 @@
 {% block title %}{{ feed_name | title }} movies {% endblock %}
 
 {% block content %}
+<div class="row" style="margin-bottom: 10px; margin-left: 10px; margin-right: 10px;">
+    {% for movie in movies %}
+    {% include "includes/movie_card.html" %}
+    {% comment %} <span class="badge text-bg-dark me-1">Name</span> {% endcomment %}
+    {% endfor %}
+</div>
+{% include "includes/pagination_bar.html" %}
 {% endblock %}
