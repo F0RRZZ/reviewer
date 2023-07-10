@@ -12,4 +12,12 @@ urlpatterns = [
         'new/',
         feeds.views.NewMoviesView.as_view(),
     ),
+    django.urls.path(
+        'recently_added/',
+        feeds.views.RecentlyAddedMoviesView.as_view(),
+    ),
+    django.urls.path(
+        'best/',
+        feeds.views.BestMoviesView.as_view(),
+    ),
 ]

@@ -3,6 +3,14 @@
 {% block title %}{{ feed_name | title }} movies {% endblock %}
 
 {% block content %}
+<h3 style="margin-left: 20px;">Feed:</h3>
+<select class="custom-select" onchange="location = this.value" style="margin-left: 20px; margin-bottom: 20px"
+    id="feedSelector">
+    <option selected>{{ feed_name | title }}</option>
+    <option value="/new">New</option>
+    <option value="/recently_added">Recently added</option>
+    <option value="/best">Best</option>
+</select>
 <div class="row" style="margin-bottom: 10px; margin-left: 10px; margin-right: 10px;">
     {% for movie in movies %}
     {% include "includes/movie_card.html" %}
