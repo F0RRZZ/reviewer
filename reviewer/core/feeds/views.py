@@ -3,7 +3,7 @@ import django.views.generic
 
 class FeedBaseView(django.views.generic.ListView):
     context_object_name = 'movies'
-    paginate_by = 3
+    paginate_by = 12
     template_name = 'feeds/feed.html'
 
     def get_context_data(self, **kwargs):

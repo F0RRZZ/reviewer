@@ -9,11 +9,8 @@
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="/" class="nav-link px-2 link-dark">Films</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">Genres</a></li>
+            <li><a href="{% url 'genres:genres' %}" class="nav-link px-2 link-dark">Genres</a></li>
             {% if user.is_staff %}
-            <li><a href="#" class="nav-link px-2 link-dark">Add film</a></li>
-            {% endif %}
-            {% if user.is_superuser %}
             <li><a href="{% url 'admin:index' %}" class="nav-link px-2 link-dark">Admin</a></li>
             {% endif %}
         </ul>

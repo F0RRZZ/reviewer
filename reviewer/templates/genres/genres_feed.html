@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Genres{% endblock %}
+
+{% block content %}
+{% for genre in genres %}
+<div class="justify-content-center" style="margin-bottom: 10px; margin-left: 10px; margin-right: 10px;">
+    {% include "includes/genre_card.html" %}
+</div>
+{% endfor %}
+{% include "includes/pagination_bar.html" %}
+{% endblock %}

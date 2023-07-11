@@ -7,21 +7,22 @@
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="form-group" style="padding-left: 300px; padding-right: 300px;">
-    <img src="{{ profile_owner.get_image_300x300 }}" width="300" height="300" style="border: 1px solid black"/><br/>
-    {% for field in form %}
-        {{ field.label_tag }}<br/>
-        {{ field }}<br/>
-        {{ field.errors }}<br/>
-    {% endfor %}
+        <img src="{{ profile_owner.get_image_300x300 }}" width="300" height="300"
+            style="border: 1px solid black" /><br />
+        {% for field in form %}
+        {{ field.label_tag }}<br />
+        {{ field }}<br />
+        {{ field.errors }}<br />
+        {% endfor %}
     </div>
     <input type="submit" value="Submit" class="btn btn-primary" style="margin-left: 300px; margin-right: 300px;">
 </form>
 {% else %}
 <div class="profile" style="padding-left: 300px; padding-right: 300px;">
-    <img src="{{ profile_owner.get_image_300x300 }}" width="300" height="300" style="border: 1px solid black"/><br/>
+    <img src="{{ profile_owner.get_image_300x300 }}" width="300" height="300" style="border: 1px solid black" /><br />
     <div class="render_username" style="display: flex; flex-direction: row;">
         {% if profile_owner.is_staff %}
-        <h3>{{ profile_owner.username }} <span class="badge text-bg-dark me-1">STAFF</span></h3>
+        <h3>{{ profile_owner.username }} <span class="badge text-bg-primary me-1">STAFF</span></h3>
         {% else %}
         <h3>{{ profile_owner.username }}</h3>
         {% endif %}

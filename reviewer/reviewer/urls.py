@@ -6,6 +6,12 @@ import django.urls
 urlpatterns = [
     django.urls.path('', django.urls.include('feeds.urls', namespace='feeds')),
     django.urls.path(
+        'genres/', django.urls.include('genres.urls', namespace='genres')
+    ),
+    django.urls.path(
+        'movies/', django.urls.include('movies.urls', namespace='movies')
+    ),
+    django.urls.path(
         'user/', django.urls.include('users.urls', namespace='users')
     ),
     django.urls.path(

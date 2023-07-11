@@ -5,7 +5,7 @@ import movies.models
 
 
 class MovieManager(django.db.models.Manager):
-    def get_with_select_related(self):
+    def get_with_genres(self):
         return self.get_queryset().prefetch_related(
             django.db.models.Prefetch(
                 movies.models.Movie.genre.field.name,
@@ -16,11 +16,11 @@ class MovieManager(django.db.models.Manager):
         )
 
     def new_movies(self):
-        return self.get_with_select_related().order_by(
+        return self.get_with_genres().order_by(
             f'-{movies.models.Movie.created_at.field.name}'
         )
 
     def recently_added_movies(self):
-        return self.get_with_select_related().order_by(
+        return self.get_with_genres().order_by(
             f'-{movies.models.Movie.uploaded_at.field.name}'
         )

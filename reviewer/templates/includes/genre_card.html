@@ -1,0 +1,6 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ genre.name | title }}</h5>
+        <a href="{% url 'movies:movies_by_genre' genre.name %}" class="btn btn-primary">Фильмы</a>
+    </div>
+</div>

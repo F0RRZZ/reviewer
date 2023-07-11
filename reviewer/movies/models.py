@@ -40,7 +40,7 @@ class Movie(core.base_models.NameFormatterBaseModel, core.mixins.ImageMixin):
     uploaded_at = django.db.models.DateField(
         'uploaded_at',
         editable=False,
-        auto_now=True,
+        auto_now_add=True,
     )
 
     objects = movies.managers.MovieManager()

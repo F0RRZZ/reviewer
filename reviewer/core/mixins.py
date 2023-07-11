@@ -3,10 +3,6 @@ import sorl.thumbnail
 
 class ImageMixin:
     @property
-    def get_image_50x50(self) -> str:
-        return self.get_sized_image('50x50').url
-
-    @property
     def get_image_300x300(self) -> str:
         return self.get_sized_image('300x300').url
 
