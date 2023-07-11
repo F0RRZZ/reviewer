@@ -3,9 +3,13 @@
 {% block title %}{{ genre | title }}{% endblock %}
 
 {% block content %}
+{% if movies %}
 <div class="row" style="margin-bottom: 10px; margin-left: 10px; margin-right: 10px;">
     {% for movie in movies %}
     {% include "includes/movie_card.html" %}
     {% endfor %}
 </div>
+{% else %}
+<h1>Фильмов с таким жанром не найдено.</h1>
+{% endif %}
 {% endblock %}

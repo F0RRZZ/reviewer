@@ -3,6 +3,10 @@ import django.views.generic
 import movies.models
 
 
+class MovieDetailView(django.views.generic.ListView):
+    ...
+
+
 class MoviesByGenreView(django.views.generic.ListView):
     context_object_name = 'movies'
     model = movies.models.Movie

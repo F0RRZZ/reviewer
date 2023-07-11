@@ -35,6 +35,9 @@ INSTALLED_APPS = [
     'genres.apps.GenresConfig',
     'feeds.apps.FeedsConfig',
     'movies.apps.MoviesConfig',
+    'persons.apps.PersonsConfig',
+    'rating.apps.RatingConfig',
+    'roles.apps.RolesConfig',
     'users.apps.UsersConfig',
 ]
 
