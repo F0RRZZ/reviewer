@@ -15,12 +15,33 @@ class MovieManager(django.db.models.Manager):
             )
         )
 
-    def new_movies(self):
+    def get_new_movies(self):
         return self.get_with_genres().order_by(
             f'-{movies.models.Movie.created_at.field.name}'
         )
 
-    def recently_added_movies(self):
+    def get_recently_added_movies(self):
         return self.get_with_genres().order_by(
             f'-{movies.models.Movie.uploaded_at.field.name}'
+        )
+
+    def get_best_movies(self):
+        return (
+            self.get_with_genres()
+            .annotate(
+                avg_rating=django.db.models.Avg('score_movie__total_rating')
+            )
+            .order_by('-avg_rating')
+        )
+
+    def get_for_view_details(self):
+        return self.get_with_genres().prefetch_related(
+            movies.models.Movie.actors.field.name,
+            movies.models.Movie.director.field.name,
+            movies.models.Movie.producer.field.name,
+            movies.models.Movie.screenwriter.field.name,
+            movies.models.Movie.operator.field.name,
+            movies.models.Movie.composer.field.name,
+            movies.models.Movie.artist.field.name,
+            movies.models.Movie.montage.field.name,
         )

@@ -102,7 +102,7 @@ class Movie(core.base_models.NameFormatterBaseModel, core.mixins.ImageMixin):
         verbose_name_plural = 'movies'
 
     def __str__(self):
-        return self.name[:30]
+        return self.name[:50]
 
     def image_tmb(self):
         if self.image:

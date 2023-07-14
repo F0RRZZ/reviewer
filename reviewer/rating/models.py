@@ -2,6 +2,7 @@ import django.core.validators
 import django.db.models
 
 import movies.models
+import rating.managers
 import users.models
 
 
@@ -52,10 +53,20 @@ class Rating(django.db.models.Model):
         help_text='Maximum of 1000 symbols',
         null=True,
     )
+    created_at = django.db.models.DateTimeField(
+        'created_at',
+        auto_now_add=True,
+        null=True,
+    )
+
+    objects = rating.managers.RatingManager()
 
     class Meta:
         verbose_name = 'rating'
         verbose_name_plural = 'ratings'
+
+    def __str__(self):
+        return 'Rating'
 
     def save(self, *args, **kwargs):
         self.total_rating = (

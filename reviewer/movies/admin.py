@@ -44,4 +44,32 @@ class MoviesAdmin(django.contrib.admin.ModelAdmin):
             kwargs['queryset'] = db_field.related_model.objects.filter(
                 career__name='режиссер'
             )
+        elif db_field.name == movies.models.Movie.actors.field.name:
+            kwargs['queryset'] = db_field.related_model.objects.filter(
+                career__name='актер'
+            )
+        elif db_field.name == movies.models.Movie.producer.field.name:
+            kwargs['queryset'] = db_field.related_model.objects.filter(
+                career__name='продюсер'
+            )
+        elif db_field.name == movies.models.Movie.screenwriter.field.name:
+            kwargs['queryset'] = db_field.related_model.objects.filter(
+                career__name='сценарист'
+            )
+        elif db_field.name == movies.models.Movie.operator.field.name:
+            kwargs['queryset'] = db_field.related_model.objects.filter(
+                career__name='оператор'
+            )
+        elif db_field.name == movies.models.Movie.composer.field.name:
+            kwargs['queryset'] = db_field.related_model.objects.filter(
+                career__name='композитор'
+            )
+        elif db_field.name == movies.models.Movie.artist.field.name:
+            kwargs['queryset'] = db_field.related_model.objects.filter(
+                career__name='художник'
+            )
+        elif db_field.name == movies.models.Movie.montage.field.name:
+            kwargs['queryset'] = db_field.related_model.objects.filter(
+                career__name='монтажер'
+            )
         return super().formfield_for_manytomany(db_field, request, **kwargs)

@@ -27,16 +27,19 @@ class Person(core.mixins.ImageMixin, django.db.models.Model):
         ],
         help_text='Min - 120, max - 250',
         null=True,
+        blank=True,
     )
     date_of_birth = django.db.models.DateField(
         'date_of_birth',
         null=True,
+        blank=True,
     )
     place_of_birth = django.db.models.CharField(
         'place_of_birth',
         max_length=200,
         help_text='Maximum of 200 symbols',
         null=True,
+        blank=True,
     )
     genres = django.db.models.ManyToManyField(
         genres.models.Genre,

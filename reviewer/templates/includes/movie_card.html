@@ -8,7 +8,8 @@
             <span class="badge text-bg-dark me-1">{{ genre.name }}</span>
             {% endfor %}
             <br />
-            <a href="#" class="btn btn-primary" style="margin-top: 10px;">Rates</a>
+            <a href="{% url 'movies:movie_detail' movie.id %}" class="btn btn-primary"
+                style="margin-top: 10px;">Rates</a>
         </div>
     </div>
 </div>

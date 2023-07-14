@@ -3,22 +3,24 @@
 {% load static %}
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link href="{% static 'css/bootstrap.min.css' %}"
-          rel="stylesheet"
-          type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
     <title>{% block title %}Homepage{% endblock %}</title>
+    {% block head %}{% endblock %}
 </head>
+
 <body>
 
-{% include "includes/header.html" %}
+    {% include "includes/header.html" %}
 
-{% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 
-<script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
-<script src="{% static 'js/bootstrap/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'js/bootstrap/bootstrap.esm.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.esm.min.js' %}"></script>
 </body>
+
 </html>

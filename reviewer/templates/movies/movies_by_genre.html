@@ -4,12 +4,13 @@
 
 {% block content %}
 {% if movies %}
+<h1 style="margin-left: 10px;">{{ genre | title }}</h1>
 <div class="row" style="margin-bottom: 10px; margin-left: 10px; margin-right: 10px;">
     {% for movie in movies %}
     {% include "includes/movie_card.html" %}
     {% endfor %}
 </div>
 {% else %}
-<h1>Фильмов с таким жанром не найдено.</h1>
+<h1>No films with this genre have been found.</h1>
 {% endif %}
 {% endblock %}

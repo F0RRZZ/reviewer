@@ -9,4 +9,7 @@ class RatingAdmin(django.contrib.admin.ModelAdmin):
         rating.models.Rating.movie.field.name,
         rating.models.Rating.total_rating.field.name,
     )
-    readonly_fields = (rating.models.Rating.total_rating.field.name,)
+    readonly_fields = (
+        rating.models.Rating.total_rating.field.name,
+        rating.models.Rating.created_at.field.name,
+    )
