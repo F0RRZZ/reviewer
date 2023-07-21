@@ -14,21 +14,27 @@ class MovieDetailView(django.views.generic.DetailView):
     queryset = movies.models.Movie.objects.get_for_view_details()
     template_name = 'movies/movie_detail.html'
 
-    def is_review_exists(self):
+    def get_review(self):
         try:
-            rating.models.Rating.objects.get(
+            review = rating.models.Rating.objects.get(
                 user_id=self.request.user.id,
                 movie_id=self.kwargs[self.pk_url_kwarg],
             )
-            return True
+            return review
         except rating.models.Rating.DoesNotExist:
-            return False
+            return None
 
-    def get_review_form_initial_data(self) -> dict:
-        review = rating.models.Rating.objects.get(
-            user_id=self.request.user.id,
-            movie_id=self.kwargs[self.pk_url_kwarg],
-        )
+    def get_review_form_initial_data(self, review=None) -> dict:
+        if not review:
+            review = rating.models.Rating(
+                user_id=self.request.user.id,
+                movie_id=self.kwargs[self.pk_url_kwarg],
+                story=rating.models.Rating.ScoreData.DEFAULT,
+                acting=rating.models.Rating.ScoreData.DEFAULT,
+                music=rating.models.Rating.ScoreData.DEFAULT,
+                visual=rating.models.Rating.ScoreData.DEFAULT,
+                final=rating.models.Rating.ScoreData.DEFAULT,
+            )
         initial = {
             rating.models.Rating.story.field.name: review.story,
             rating.models.Rating.acting.field.name: review.acting,
@@ -53,17 +59,14 @@ class MovieDetailView(django.views.generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         movie = self.object
-        review_exists = self.is_review_exists()
+        review = self.get_review()
         context['movie'] = movie
-        context['review_exists'] = review_exists
+        context['review_exists'] = review is not None
         context['paginator'], context['page_obj'] = self.get_paginator()
         context['avg_rating'] = rating.models.Rating.objects.get_avg(movie.id)
-        if self.is_review_exists():
-            context['form'] = rating.forms.RatingForm(
-                initial=self.get_review_form_initial_data()
-            )
-        else:
-            context['form'] = rating.forms.RatingForm
+        context['form'] = rating.forms.RatingForm(
+            initial=self.get_review_form_initial_data(review=review)
+        )
         return context
 
     def post(self, request, movie_id):

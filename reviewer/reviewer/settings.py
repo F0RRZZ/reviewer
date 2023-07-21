@@ -10,6 +10,8 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 env = environ.Env(
     ALLOWED_HOSTS=(list, ['*']),
     DEBUG=(bool, True),
+    REDIS_HOST=(str, '127.0.0.1'),
+    REDIS_PORT=(str, '6379'),
     SECRET_KEY=(str, 'dummy-key'),
 )
 
@@ -140,3 +142,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.User'
 
 THUMBNAIL_DEBUG = True
+
+REDIS_HOST = env('REDIS_HOST')
+REDIS_PORT = env('REDIS_PORT')
+CACHE = {
+    'default': 'django_redis.cache.RedisCache',
+    'LOCATION': f'redis://{REDIS_HOST}:{REDIS_PORT}/1',
+}
