@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+
+{% block title %}{{ movie.name | title }}{% endblock %}
+
+{% block head %}
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    td,
+    th {
+        border: none;
+    }
+
+    td {
+        padding: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="movie" style="display: flex; flex-direction: row; margin-left: 100px; margin-right: 100px;">
+    <img src="{{ movie.get_image_300x300 }}" height="100%" />
+    <div class="movie-info" style="margin-left: 80px;">
+        <h2><b>{{ movie.name }}</b></h2>
+        <h4 style="margin-top: 20px;">About movie:</h4>
+        <table>
+            <tr>
+                <td>Year of production:</td>
+                <td>{{ movie.created_at }}</td>
+            </tr>
+            <tr>
+                <td>Country:</td>
+                <td>{% if country %}{{ movie.country }}{% else %}-{% endif %}</td>
+            </tr>
+            <tr>
+                <td>Genres:</td>
+                <td>
+                    {% if movie.genre.all %}
+                    {% for genre in movie.genre.all %}
+                    <a href="{% url 'movies:movies_by_genre' genre.name %}">
+                        {% if forloop.last %}
+                        {{ genre.name }} {{ genre.surname }}
+                        {% else %}
+                        {{ genre.name }} {{ genre.surname }},
+                        {% endif %}
+                    </a>
+                    {% endfor %}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Director:</td>
+                <td>
+                    {% if movie.director.all %}
+                    {% for director in movie.director.all|slice:":3" %}
+                    <a href="{% url 'persons:person_detail' director.id %}">
+                        {% if forloop.last %}
+                        {{ director.name }} {{ director.surname }}
+                        {% else %}
+                        {{ director.name }} {{ director.surname }},
+                        {% endif %}
+                    </a>
+                    {% endfor %}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Screenwriter:</td>
+                <td>
+                    {% if movie.screenwriter.all %}
+                    {% for screenwriter in movie.screenwriter.all|slice:":3" %}
+                    <a href="{% url 'persons:person_detail' screenwriter.id %}">
+                        {% if forloop.last %}
+                        {{ screenwriter.name }} {{ screenwriter.surname }}
+                        {% else %}
+                        {{ screenwriter.name }} {{ screenwriter.surname }},
+                        {% endif %}
+                    </a>
+                    {% endfor %}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Producer:</td>
+                <td>
+                    {% if movie.producer.all %}
+                    {% for producer in movie.producer.all|slice:":3" %}
+                    <a href="{% url 'persons:person_detail' producer.id %}">
+                        {% if forloop.last %}
+                        {{ producer.name }} {{ producer.surname }}
+                        {% else %}
+                        {{ producer.name }} {{ producer.surname }},
+                        {% endif %}
+                    </a>
+                    {% endfor %}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Operator:</td>
+                <td>
+                    {% if movie.operator.all %}
+                    {% for operator in movie.operator.all|slice:":3" %}
+                    <a href="{% url 'persons:person_detail' operator.id %}">
+                        {% if forloop.last %}
+                        {{ operator.name }} {{ operator.surname }}
+                        {% else %}
+                        {{ operator.name }} {{ operator.surname }},
+                        {% endif %}
+                    </a>
+                    {% endfor %}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Composer:</td>
+                <td>
+                    {% if movie.composer.all %}
+                    {% for composer in movie.composer.all|slice:":3" %}
+                    <a href="{% url 'persons:person_detail' composer.id %}">
+                        {% if forloop.last %}
+                        {{ composer.name }} {{ composer.surname }}
+                        {% else %}
+                        {{ composer.name }} {{ composer.surname }},
+                        {% endif %}
+                    </a>
+                    {% endfor %}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Montage:</td>
+                <td>
+                    {% if movie.montage.all %}
+                    {% for montage in movie.montage.all|slice:":3" %}
+                    <a href="{% url 'persons:person_detail' montage.id %}">
+                        {% if forloop.last %}
+                        {{ montage.name }} {{ montage.surname }}
+                        {% else %}
+                        {{ montage.name }} {{ montage.surname }},
+                        {% endif %}
+                    </a>
+                    {% endfor %}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Budget:</td>
+                <td>
+                    {% if movie.budget %}
+                    ${{ movie.budget }}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="raiting-info">
+        <h3 style="text-align: center;">Общий рейтинг:</h3>
+        <h1 style="text-align: center;">{{ avg_rating }}</h1>
+        <hr>
+        <h2>Your review:</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+            <label for="{{ field.auto_id }}">{{ field.label }}
+                {% if field.value and field.name != 'comment' %}
+                <span id="{{ field.auto_id }}-value"> | {{ field.value }}</span>
+                {% endif %}
+            </label>
+            {{ field }}
+            {% endfor %}
+            <button class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+        </form>
+        <span id="story-value"></span>
+    </div>
+</div>
+<hr>
+<div class="reviews">
+    {% if page_obj %}
+    <h2 style="margin-left: 20px;">Other reviews:</h2>
+    {% for review in page_obj %}
+    <div class="card" style="margin-left: 20px; margin-right: 200px; margin-bottom: 20px;">
+        <div class="card-header">
+            Story: {{ review.story }} |
+            Acting: {{ review.acting }} |
+            Music: {{ review.music }} |
+            Visual: {{ review.visual }} |
+            Final: {{ review.final }} ||
+            <b>Total: {{ review.total_rating }}</b>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'users:profile' review.user %}">{{ review.user }}</a></h5>
+            <p class="card-text">{{ review.comment }}</p>
+        </div>
+        <div class="card-footer text-muted">{{ review.created_at }}</div>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+{% include "includes/pagination_bar.html" %}
+<script>
+    document.querySelectorAll('input[type="range"]').forEach(function (input) {
+        input.addEventListener('input', function () {
+            var valueElementId = input.id + "-value";
+            document.getElementById(valueElementId).textContent = " | " + input.value;
+        });
+    });
+</script>
+{% endblock %}

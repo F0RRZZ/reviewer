@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}{{ person.name }} {{ person.surname }}{% endblock %}
+
+{% block head %}
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    td,
+    th {
+        border: none;
+    }
+
+    td {
+        padding: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="person" style="display: flex; flex-direction: row; margin-left: 100px; margin-right: 100px;">
+    <img src="{{ person.get_image_300x300 }}" height="400" />
+    <div class="person-info">
+        <h2><b>{{ person.name }} {{ person.surname }}</b></h2>
+        <h4 style="margin-top: 20px;">About person:</h4>
+        <table>
+            <tr>
+                <td>Career:</td>
+                <td>
+                    {% if person.career.all %}
+                    {% for role in person.career.all %}
+                    {% if forloop.last %}
+                    <a>{{ role.name }}</a>
+                    {% else %}
+                    <a>{{ role.name }}, </a>
+                    {% endif %}
+                    {% endfor %}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Height:</td>
+                <td>
+                    {% if person.height %}
+                    {{ person.height }} cm
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Date of birth:</td>
+                <td>
+                    {% if person.date_of_birth %}
+                    {{ person.date_of_birth }}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Place of birth:</td>
+                <td>
+                    {% if person.place_of_birth %}
+                    {{ person.place_of_birth }}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Genres:</td>
+                <td>
+                    {% if person.genres.all %}
+                    {% for genre in person.genres.all %}
+                    <a href="{% url 'movies:movies_by_genre' genre.name %}">
+                        {% if forloop.last %}
+                        {{ genre.name }} {{ genre.surname }}
+                        {% else %}
+                        {{ genre.name }} {{ genre.surname }},
+                        {% endif %}
+                    </a>
+                    {% endfor %}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}

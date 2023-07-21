@@ -1,7 +1,10 @@
 import django.core.paginator
+import django.shortcuts
+import django.urls
 import django.views.generic
 
 import movies.models
+import rating.forms
 import rating.models
 
 
@@ -20,6 +23,21 @@ class MovieDetailView(django.views.generic.DetailView):
             return True
         except rating.models.Rating.DoesNotExist:
             return False
+
+    def get_review_form_initial_data(self) -> dict:
+        review = rating.models.Rating.objects.get(
+            user_id=self.request.user.id,
+            movie_id=self.kwargs[self.pk_url_kwarg],
+        )
+        initial = {
+            rating.models.Rating.story.field.name: review.story,
+            rating.models.Rating.acting.field.name: review.acting,
+            rating.models.Rating.music.field.name: review.music,
+            rating.models.Rating.visual.field.name: review.visual,
+            rating.models.Rating.final.field.name: review.final,
+            rating.models.Rating.comment.field.name: review.comment,
+        }
+        return initial
 
     def get_paginator(self):
         reviews = rating.models.Rating.objects.select_related('user').filter(
@@ -40,7 +58,32 @@ class MovieDetailView(django.views.generic.DetailView):
         context['review_exists'] = review_exists
         context['paginator'], context['page_obj'] = self.get_paginator()
         context['avg_rating'] = rating.models.Rating.objects.get_avg(movie.id)
+        if self.is_review_exists():
+            context['form'] = rating.forms.RatingForm(
+                initial=self.get_review_form_initial_data()
+            )
+        else:
+            context['form'] = rating.forms.RatingForm
         return context
+
+    def post(self, request, movie_id):
+        existing_review = rating.models.Rating.objects.filter(
+            user_id=request.user.id,
+            movie_id=self.kwargs[self.pk_url_kwarg],
+        ).first()
+
+        review_form = rating.forms.RatingForm(
+            request.POST or None, instance=existing_review
+        )
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.user_id = request.user.id
+            review.movie_id = movie_id
+            review.save()
+
+        return django.shortcuts.redirect(
+            django.urls.reverse_lazy('movies:movie_detail', kwargs=self.kwargs)
+        )
 
 
 class MoviesByGenreView(django.views.generic.ListView):

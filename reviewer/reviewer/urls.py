@@ -12,6 +12,9 @@ urlpatterns = [
         'movies/', django.urls.include('movies.urls', namespace='movies')
     ),
     django.urls.path(
+        'person/', django.urls.include('persons.urls', namespace='persons')
+    ),
+    django.urls.path(
         'user/', django.urls.include('users.urls', namespace='users')
     ),
     django.urls.path(
