@@ -1,5 +1,6 @@
 import django.core.validators
 import django.db.models
+import django.utils.timezone
 
 import core.mixins
 import genres.models
@@ -68,3 +69,8 @@ class Person(core.mixins.ImageMixin, django.db.models.Model):
 
     def __str__(self):
         return self.name + ' ' + self.surname
+
+    def save(self, *args, **kwargs):
+        if self.date_of_birth is None:
+            self.date_of_birth = django.utils.timezone.now()
+        super(Person, self).save(*args, **kwargs)

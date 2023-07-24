@@ -1,4 +1,7 @@
+import pytz
 import string
+
+import django.utils
 
 
 def name_formatter(name):
@@ -30,3 +33,9 @@ def name_formatter(name):
         formatted_name.replace(en_letter, ru_letter)
     formatted_name = formatted_name.replace(' ', '')
     return formatted_name
+
+
+def get_today_date(request):
+    timezone = pytz.timezone(request.session.get('django_timezone', 'UTC'))
+    today = django.utils.timezone.now().astimezone(timezone).date()
+    return today

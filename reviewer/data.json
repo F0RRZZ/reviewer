@@ -1,0 +1,3253 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2023-07-07T07:12:04.057Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Marat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2023-07-09T14:35:54.929Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Мистер Робот (сериал 2015 – 20",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2023-07-09T14:54:11.272Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Назад в будущее (1985)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2023-07-09T14:56:09.795Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Назад в будущее (1985)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2023-07-09T18:24:29.321Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "триллер",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2023-07-09T18:24:47.113Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "драма",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2023-07-09T18:24:54.254Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "криминал",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2023-07-09T18:25:22.350Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "фантастика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2023-07-09T18:25:26.865Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "комедия",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2023-07-09T18:25:32.868Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "приключения",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2023-07-09T18:31:14.532Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Мистер Робот (сериал 2015 – 20",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Genre\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2023-07-09T18:31:25.939Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Назад в будущее (1985)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Genre\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2023-07-10T14:42:53.378Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Джентльмены удачи (1971)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2023-07-10T14:43:11.363Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "детектив",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2023-07-10T14:43:24.243Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Джентльмены удачи (1971)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Genre\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2023-07-10T14:44:17.932Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "семейный",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2023-07-10T14:45:23.210Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Один дома (1990)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2023-07-10T14:48:23.580Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "мультфильм",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2023-07-10T14:48:41.942Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "10",
+    "object_repr": "фэнтези",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2023-07-10T14:48:53.726Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "мелодрама",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2023-07-10T14:50:51.308Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Шрек",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2023-07-10T14:51:42.790Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "12",
+    "object_repr": "фантастика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2023-07-10T14:52:24.371Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "13",
+    "object_repr": "боевик",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2023-07-10T14:52:34.700Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "14",
+    "object_repr": "военный",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2023-07-10T14:52:45.692Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "15",
+    "object_repr": "аниме",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2023-07-10T14:52:51.786Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "16",
+    "object_repr": "исторический",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2023-07-10T14:53:24.836Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "17",
+    "object_repr": "документальный",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2023-07-10T14:53:40.656Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "18",
+    "object_repr": "детский",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2023-07-10T14:54:02.507Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "19",
+    "object_repr": "биография",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2023-07-10T14:54:07.763Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "20",
+    "object_repr": "вестерн",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2023-07-10T14:54:18.843Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "21",
+    "object_repr": "фильм-нуар",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2023-07-10T14:54:27.951Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "22",
+    "object_repr": "спортивный",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2023-07-10T14:54:40.497Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "23",
+    "object_repr": "короткометражный",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2023-07-10T14:54:51.772Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "24",
+    "object_repr": "мюзикл",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2023-07-10T14:54:57.681Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "25",
+    "object_repr": "ток-шоу",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2023-07-10T14:55:05.037Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "26",
+    "object_repr": "игры",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2023-07-10T14:57:39.896Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Титаник (1997)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2023-07-10T14:57:49.034Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "16",
+    "object_repr": "история",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2023-07-10T14:57:56.844Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Титаник (1997)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Genre\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2023-07-10T16:43:39.952Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Мистер Робот (сериал 2015 – 20",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2023-07-10T16:45:30.717Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Шрек",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2023-07-10T16:46:03.679Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Джентльмены удачи (1971)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2023-07-10T16:46:42.144Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Один дома (1990)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2023-07-10T16:47:13.544Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Титаник (1997)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2023-07-10T17:59:43.808Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "marat",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2023-07-10T18:03:17.621Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "marat",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2023-07-11T13:09:46.373Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Назад в будущее (1985)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2023-07-11T13:11:42.026Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Джентльмены удачи (1971)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2023-07-11T15:45:26.213Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Мистер Робот (сериал 2015 – 20",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2023-07-11T19:17:02.053Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "режиссер",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2023-07-11T19:17:10.899Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "сценарий",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2023-07-11T19:17:18.603Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "продюсер",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2023-07-11T19:17:26.967Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4",
+    "object_repr": "оператор",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2023-07-11T19:17:31.418Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "композитор",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2023-07-11T19:17:40.337Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6",
+    "object_repr": "художник",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2023-07-11T19:17:45.406Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "7",
+    "object_repr": "монтаж",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2023-07-11T19:19:55.444Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "актер",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2023-07-11T19:21:41.555Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Джеймс Кэмерон",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2023-07-11T19:22:39.689Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "сценарист",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2023-07-11T19:22:47.627Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "7",
+    "object_repr": "монтажер",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2023-07-11T19:23:28.156Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Джеймс Кэмерон",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Career\", \"Genres\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2023-07-11T19:27:59.992Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Титаник (1997)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Country\", \"Director\", \"Producer\", \"Screenwriter\", \"Montage\", \"Budget\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2023-07-13T10:54:53.067Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Rating object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2023-07-13T13:17:21.980Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Rating",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2023-07-13T15:23:58.049Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "Памела Исли",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2023-07-13T15:26:31.634Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "3",
+    "object_repr": "Эл Гиддингс",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2023-07-13T16:37:49.687Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "Грант Хилл",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2023-07-13T16:38:53.971Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Титаник (1997)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Producer\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2023-07-14T16:45:56.563Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Джеймс Кэмерон",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2023-07-21T13:27:27.744Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "Rating",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2023-07-21T13:27:31.738Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Rating",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2023-07-21T13:31:27.010Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "Rating",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2023-07-21T13:33:34.294Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "Rating",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2023-07-22T21:13:27.775Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Qqweqwe qwe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2023-07-22T21:40:50.071Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Qqweqwe qwe",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date_of_birth\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2023-07-22T21:50:28.992Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Джеймс Кэмерон",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date_of_birth\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2023-07-22T21:51:34.916Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Qqweqwe qwe",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date_of_birth\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2023-07-22T21:51:42.240Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Qqweqwe qwe",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date_of_birth\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2023-07-22T21:51:47.211Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Qqweqwe qwe",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Date_of_birth\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add kv store",
+    "content_type": 7,
+    "codename": "add_kvstore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change kv store",
+    "content_type": 7,
+    "codename": "change_kvstore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete kv store",
+    "content_type": 7,
+    "codename": "delete_kvstore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view kv store",
+    "content_type": 7,
+    "codename": "view_kvstore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 8,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 8,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 8,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 8,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add movie",
+    "content_type": 9,
+    "codename": "add_movie"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change movie",
+    "content_type": 9,
+    "codename": "change_movie"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete movie",
+    "content_type": 9,
+    "codename": "delete_movie"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view movie",
+    "content_type": 9,
+    "codename": "view_movie"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add genre",
+    "content_type": 10,
+    "codename": "add_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change genre",
+    "content_type": 10,
+    "codename": "change_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete genre",
+    "content_type": 10,
+    "codename": "delete_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view genre",
+    "content_type": 10,
+    "codename": "view_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add rating",
+    "content_type": 11,
+    "codename": "add_rating"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change rating",
+    "content_type": 11,
+    "codename": "change_rating"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete rating",
+    "content_type": 11,
+    "codename": "delete_rating"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view rating",
+    "content_type": 11,
+    "codename": "view_rating"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add role",
+    "content_type": 12,
+    "codename": "add_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change role",
+    "content_type": 12,
+    "codename": "change_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete role",
+    "content_type": 12,
+    "codename": "delete_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view role",
+    "content_type": 12,
+    "codename": "view_role"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add person",
+    "content_type": 13,
+    "codename": "add_person"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change person",
+    "content_type": 13,
+    "codename": "change_person"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete person",
+    "content_type": 13,
+    "codename": "delete_person"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view person",
+    "content_type": 13,
+    "codename": "view_person"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "thumbnail",
+    "model": "kvstore"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "users",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "movies",
+    "model": "movie"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "genres",
+    "model": "genre"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "rating",
+    "model": "rating"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "roles",
+    "model": "role"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "persons",
+    "model": "person"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "253157qgkhh05lrjhd023alfyjc54u53",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAUBe_C2hBooeW5dN8zkA98pWogKe3KeHdt0oVu38y8l_C0rdlvjRc_J3EWWpx-t0DxwWUH6U7lVmWsZV3mIHdFHrTJqSZ-Xg737yBTy99aQTE5G6IOgGFnu0ggQ3BkYTpgMKAEpXs9GmayjOuANEIFi2h68f4A1mY3aA:1qKfE4:jIuZfBmSgYrz15izhIu3QKFoeOIt88-TMSfUxR0cPKg",
+    "expire_date": "2023-07-29T13:22:20.355Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4j5v84oug9f1cbcjgo8ct0vv3qr8xwuv",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAUBe_C2hBooeW5dN8zkA98pWogKe3KeHdt0oVu38y8l_C0rdlvjRc_J3EWWpx-t0DxwWUH6U7lVmWsZV3mIHdFHrTJqSZ-Xg737yBTy99aQTE5G6IOgGFnu0ggQ3BkYTpgMKAEpXs9GmayjOuANEIFi2h68f4A1mY3aA:1qMwgz:KTR0BZM9eV26kP_aoT0o-NRtWO9-lop1Ny3BfyFn5jQ",
+    "expire_date": "2023-08-04T20:25:37.985Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5wlyfcyiwfdk8jc53cq0puxt52eqspvv",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAUBe_C2hBooeW5dN8zkA98pWogKe3KeHdt0oVu38y8l_C0rdlvjRc_J3EWWpx-t0DxwWUH6U7lVmWsZV3mIHdFHrTJqSZ-Xg737yBTy99aQTE5G6IOgGFnu0ggQ3BkYTpgMKAEpXs9GmayjOuANEIFi2h68f4A1mY3aA:1qMpyd:3s6Eet2DaVEJMJWq25CtZxVnPsqHoBAT2rO0YBaixPE",
+    "expire_date": "2023-08-04T13:15:23.123Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7p3aphxnnmwy8ivsbhj7v52zkbmit3ny",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAUBe_C2hBooeW5dN8zkA98pWogKe3KeHdt0oVu38y8l_C0rdlvjRc_J3EWWpx-t0DxwWUH6U7lVmWsZV3mIHdFHrTJqSZ-Xg737yBTy99aQTE5G6IOgGFnu0ggQ3BkYTpgMKAEpXs9GmayjOuANEIFi2h68f4A1mY3aA:1qI8qe:WxcgqkgLFK3_RhitxCTyq8IqdoKXjPVvev7WW6IwC8I",
+    "expire_date": "2023-07-22T14:23:44.357Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "c65rzw0wzj9vtv20ld9y9q4mytn4koka",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAUBe_C2hBooeW5dN8zkA98pWogKe3KeHdt0oVu38y8l_C0rdlvjRc_J3EWWpx-t0DxwWUH6U7lVmWsZV3mIHdFHrTJqSZ-Xg737yBTy99aQTE5G6IOgGFnu0ggQ3BkYTpgMKAEpXs9GmayjOuANEIFi2h68f4A1mY3aA:1qI9fp:7zS_79DS6q4X3XW9C--fT2XBx5jT8g6UvupuMejSNVc",
+    "expire_date": "2023-07-22T15:16:37.749Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "g6rjod3c25aih9y5zz6ii6v8plmnyl1z",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAUBe_C2hBooeW5dN8zkA98pWogKe3KeHdt0oVu38y8l_C0rdlvjRc_J3EWWpx-t0DxwWUH6U7lVmWsZV3mIHdFHrTJqSZ-Xg737yBTy99aQTE5G6IOgGFnu0ggQ3BkYTpgMKAEpXs9GmayjOuANEIFi2h68f4A1mY3aA:1qNJpc:t_txVOAC8GR2bt7L1NXKjBY7SAKBAB-x0_TtvAwWMx0",
+    "expire_date": "2023-08-05T21:08:04.754Z"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||021c12540643ef032fa8fe147b3b288a",
+  "fields": {
+    "value": "{\"name\": \"movies/movie_5/orig.jpeg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2000, 3000]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||048248a711479fe6aefb822d875d8169",
+  "fields": {
+    "value": "{\"name\": \"cache/f1/66/f16626972917259ea8c9b5b4b9db693c.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [50, 50]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||06a2618f18a5bb6ec42598efbb6d0240",
+  "fields": {
+    "value": "{\"name\": \"cache/bd/a0/bda005dfb0f4553d6767c8bcb11ba080.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||08a4277633bd32061d9f3b255cc5d29d",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/\\u0421\\u043d\\u0438\\u043c\\u043e\\u043a_\\u044d\\u043a\\u0440\\u0430\\u043d\\u0430_2023-07-06_\\u0432_11.10.01_eOyh77i.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||0912147418e8f63e9628f676cf229495",
+  "fields": {
+    "value": "{\"name\": \"cache/1e/51/1e51afd3770036f6b30fbab04f6e21a0.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [50, 50]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||0af93b21bc5835b0dface6e5e8aae08d",
+  "fields": {
+    "value": "{\"name\": \"cache/26/0a/260aa81186d8c44109321782d81fb00e.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||0afda0fcee87ec812e4f72970f269e50",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_gfWkDQ9.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||0b4ed0791ac13d3ab59923c6d3abdf9f",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_SqeFFuA.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||0ea682afba64a268574861da0c7a7798",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/\\u0421\\u043a\\u0430\\u043d_20230630_27_ew8uYsD.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [624, 855]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||0f199844ca54eb0eaa2844014067c16e",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_fhtVleq.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||0f6b788569fcebf737fba73bad37bf0a",
+  "fields": {
+    "value": "{\"name\": \"persons/person_1/default_avatar.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [512, 512]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||0fb77ffac66f0e6ca09945ce5237a517",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/\\u0421\\u043d\\u0438\\u043c\\u043e\\u043a_\\u044d\\u043a\\u0440\\u0430\\u043d\\u0430_2023-07-06_\\u0432_11.10.01_kZ2iYob.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||1114a5ef607af5aa12bdb502b0e65d3f",
+  "fields": {
+    "value": "{\"name\": \"cache/43/42/43424177b570461729aec6ef7b025fa1.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||11ad8a2f851787b903c32bf905604358",
+  "fields": {
+    "value": "{\"name\": \"cache/07/9a/079a9f76345648726dc5cee7732397bb.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||147312272410caf192a6f5548e3e56ef",
+  "fields": {
+    "value": "{\"name\": \"cache/10/07/10078efe80c36a039022108cf828b029.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||156d454cf5db83598e646a19405dd699",
+  "fields": {
+    "value": "{\"name\": \"cache/ae/84/ae8404da6545d198d42c2e16d4907e4c.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||15b0dc5f30e20812d24e98a421bf1774",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_uNWBVGl.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||16d67c48cdefc572171bbd9508845b9c",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_zRGeG71.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||1754198f6f80db147004c68ee4fe3efe",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_qcyJ7Cg.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||19295e7b48853343b9aa96b77de53039",
+  "fields": {
+    "value": "{\"name\": \"cache/06/52/065292edf022001cee7d853f92c62954.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||1d66a102bb111b738f977711c6b50829",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/\\u0421\\u043d\\u0438\\u043c\\u043e\\u043a_\\u044d\\u043a\\u0440\\u0430\\u043d\\u0430_2023-07-06_\\u0432_11.10.01_lNrzHTO.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||1daf401464c36f50628cd4c8b9e3027c",
+  "fields": {
+    "value": "{\"name\": \"movies/movie_1/769126394bb5760f498ab5d345e5aa-1.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [1280, 720]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||2305e0fd21821dac55154c2e66d46142",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/\\u0421\\u043d\\u0438\\u043c\\u043e\\u043a_\\u044d\\u043a\\u0440\\u0430\\u043d\\u0430_2023-07-06_\\u0432_11.10.01_gFFRXyp.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||23091c615c6147342b1d78ad0f8baca4",
+  "fields": {
+    "value": "{\"name\": \"cache/fc/e8/fce886b779d2c0f07b97064f53e9ebf0.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||27e90ed46b114d3c914b3016d5e1678a",
+  "fields": {
+    "value": "{\"name\": \"cache/06/cf/06cf60e91e14fe8d228b67c64dfda362.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||2c2428f1f9f3eaecf39c36bb161ed4f3",
+  "fields": {
+    "value": "{\"name\": \"cache/18/77/1877114690d148c0724abf7ac6e6a7b0.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||2c5b2d9a7264b871491626e9278fbf25",
+  "fields": {
+    "value": "{\"name\": \"movies/movie_None/769126394bb5760f498ab5d345e5aa-1.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [1280, 720]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||366823f592ccb0bd7ee7c90ccd168905",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_7cFMmsp.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||3703f1f1f68f853e89e5811edea7c047",
+  "fields": {
+    "value": "{\"name\": \"cache/05/27/0527d7dba45b2f3889527f9f0baf7a58.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||3723320574e439e7bec5601628d71b9b",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/\\u0421\\u043d\\u0438\\u043c\\u043e\\u043a_\\u044d\\u043a\\u0440\\u0430\\u043d\\u0430_2023-07-06_\\u0432_11.10.01_4JyUYYd.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||3a20e0342ab6efff879f937788ee8860",
+  "fields": {
+    "value": "{\"name\": \"movies/movie_6/\\u043e\\u0431\\u043b\\u043e\\u0436\\u043a\\u0430-\\u0442\\u0438\\u0442\\u0430\\u043d\\u0438\\u043a-007.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [680, 967]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||3b1b6319fa812615c7bb885a36611d7c",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_6qaGYtG.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||4000c8ead9f936bfb4251355fa4f8739",
+  "fields": {
+    "value": "{\"name\": \"cache/90/52/90520beab84c63285aaca035818dcb31.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||41876dece818ee09c91307661d0529f1",
+  "fields": {
+    "value": "{\"name\": \"cache/f4/79/f479b9b86a5541723ea92a72c4dbd373.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||4191563fe31b58a17947e2e2b4f4db9b",
+  "fields": {
+    "value": "{\"name\": \"cache/5f/10/5f1087e7c488858dacdad76ed6ef5dee.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||44c03ca91ae9b0a9397989d483d512bf",
+  "fields": {
+    "value": "{\"name\": \"cache/b7/98/b7980fb1b51f50d6b91a40e814d626a6.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||4aea5b1ac1b5f04aedc5d9a04baaaf53",
+  "fields": {
+    "value": "{\"name\": \"cache/43/b3/43b37f1917e1715db56b43beb01cd4cd.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [100, 100]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||4bebbdd4dfd402464d255381ec89ad60",
+  "fields": {
+    "value": "{\"name\": \"cache/54/73/5473e0d244d6f2f7f75c7fcce5824563.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||4f6adf36049a1f7896b1fba4729d5064",
+  "fields": {
+    "value": "{\"name\": \"cache/84/19/84192b34efd78652ef412426570af3bc.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [100, 100]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||50df9b1b9ae4167b66c7ffec575c2289",
+  "fields": {
+    "value": "{\"name\": \"cache/de/31/de315a1621e0ab494b98cee3449bdaf2.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||519ac130361f86f113e677dc29075113",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/769126394bb5760f498ab5d345e5aa-1.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [1280, 720]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||61f14ac9f21b7dd31cb5387efb30e093",
+  "fields": {
+    "value": "{\"name\": \"cache/39/4a/394a778cac4273f588a1d6bf8da6a2c8.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||62f03ba71d0f37c8c7869d498169f120",
+  "fields": {
+    "value": "{\"name\": \"movies/movie_4/scale_1200.jpeg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [934, 700]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||6852b6f9b2d3f50c393825dc994142f3",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_YAamh8r.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||689e85d497f7362b66e040d4b05ae8d0",
+  "fields": {
+    "value": "{\"name\": \"cache/e5/78/e5789885aed350837dcbbefa98ebb75c.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||6b1a25ee4026a4f2e928c17ce939b212",
+  "fields": {
+    "value": "{\"name\": \"cache/a4/90/a4900b0b2101a5c29f53a65704e1e2c3.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||6c4581488be51b90cc1a23dec7ca593f",
+  "fields": {
+    "value": "{\"name\": \"cache/8e/0b/8e0b6f1be3b8cde683b057a556b25809.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||6f81670c9432260291a180d1554e852a",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/\\u0421\\u043d\\u0438\\u043c\\u043e\\u043a_\\u044d\\u043a\\u0440\\u0430\\u043d\\u0430_2023-07-06_\\u0432_11.10.01.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||6ffb4c1423695bb38231f8fb927c3421",
+  "fields": {
+    "value": "{\"name\": \"cache/12/ac/12ac0a2da5efab43bef5636019f1fc48.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||70623d0c74b7be1258a9b5673e3306ce",
+  "fields": {
+    "value": "{\"name\": \"cache/75/59/7559b6b2c1b834b90d66133633a46e29.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||71991ca7050c52cb0a04470f9f7edbfe",
+  "fields": {
+    "value": "{\"name\": \"cache/2e/0c/2e0cac796f3c58aa71a717f591e4eafe.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||71c191744a691da882b79960b830c115",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/default_avatar.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [512, 512]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||7964b53fab50db8b07937f1536edd8ae",
+  "fields": {
+    "value": "{\"name\": \"movies/movie_2/back-to-the-future.format.jpeg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [718, 1024]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||7b1d898242ea490837eb9c29a7fbcf8c",
+  "fields": {
+    "value": "{\"name\": \"cache/1e/56/1e5664674041775ba1d6eb69759ddd8b.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||7e4846fd77c48e1d3770d7d824328028",
+  "fields": {
+    "value": "{\"name\": \"cache/47/85/4785636c7e4f8267802e5330357a3779.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||823365d2106b2955e6b3a64def4a71fb",
+  "fields": {
+    "value": "{\"name\": \"cache/56/d7/56d7d323222b38684155444504954986.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||83f930b3a98dd3f9346f97ab2fe4b92c",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_9kcx0V6.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||8466c6200a1557e74e0267de94fd4443",
+  "fields": {
+    "value": "{\"name\": \"movies/movie_3/w1500_37666423.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [616, 846]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||85f3b34a518f6199a2b323f215d812f3",
+  "fields": {
+    "value": "{\"name\": \"cache/99/62/996297ab4800d32d2ecb704513b40118.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||8bca2b3cc7e78273d309647592ceab41",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_3/back-to-the-future.format.jpeg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [718, 1024]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||9013af3b199ec47d8acd88d130c30b95",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_Rqu7GU6.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||92be864100680743aa2de499cd88659d",
+  "fields": {
+    "value": "{\"name\": \"cache/3f/ef/3fefb8c132200d5dd8a8cd6b4f290f72.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||954ddea34bd7b8a809fa9d263f8a94b8",
+  "fields": {
+    "value": "{\"name\": \"cache/56/b9/56b9d0459529923ca7c0c383e696fbd7.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [100, 100]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||964c9b8696fcb1d5b657a1198c2ed652",
+  "fields": {
+    "value": "{\"name\": \"cache/d3/54/d354288fd138c38fb05a9ad846d44ba6.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||98d9ae4a1bce18a473a5791f40cb82c3",
+  "fields": {
+    "value": "{\"name\": \"cache/a3/b7/a3b789ce251da9c91d033c61ab05bd44.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||9e187bf26b3229f23b7ed2572d4b8655",
+  "fields": {
+    "value": "{\"name\": \"cache/64/20/642017d50ab188b6474b50f9f6a056ea.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||9e50713a5937aacfa02bc39e8b16a002",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_oUU6IVr.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||a0b1d1b8bf341647fb2592de0e2e9860",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_7QV9dyj.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||a325a9d7fa3e40a5ded62f935fb11de5",
+  "fields": {
+    "value": "{\"name\": \"cache/88/03/88037f4c3134a1efd6e2322a6b8f343c.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||a3cc8adb7db73b0fe19f40dc7dae6eae",
+  "fields": {
+    "value": "{\"name\": \"cache/2f/ad/2fad4d9ce3afcd15ed8b8f0844c72a26.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||a5bc90153532c2c7f1dbd3ef94db05c8",
+  "fields": {
+    "value": "{\"name\": \"cache/7a/e7/7ae72f0f85e59cd8b7e379a1839b6aa7.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||a70c732025f5175c2a6c7be5d542c412",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/\\u0421\\u043d\\u0438\\u043c\\u043e\\u043a_\\u044d\\u043a\\u0440\\u0430\\u043d\\u0430_2023-07-06_\\u0432_11.10.01_QXb5URd.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||af5445a29d032a940d59ef6ecddc48af",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_WrzIjpM.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||b03af47ed1c5ad7c940988f6eb220785",
+  "fields": {
+    "value": "{\"name\": \"images/default_movie_image.jpeg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [1772, 1208]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||b2f1e277feaae081326ecfa5c6dcde0a",
+  "fields": {
+    "value": "{\"name\": \"cache/1a/a4/1aa4dbcd255408c7857d3cc85e9916ff.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||b56fbc9fcf43f3370a6e98d1f812b6f3",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/\\u0421\\u043a\\u0430\\u043d_20230630_16.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [640, 876]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||b70a2b4f673729c49ac7714ae203b6d1",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/\\u0421\\u043d\\u0438\\u043c\\u043e\\u043a_\\u044d\\u043a\\u0440\\u0430\\u043d\\u0430_2023-07-06_\\u0432_11.10.01_dNcAEF6.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||bd359eb296afacaea9ad1c8e157990f1",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_UpoJa6Y.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||c15e51ebbc2c59ed8a6163faff5d56bc",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/\\u0421\\u043a\\u0430\\u043d_20230630_2.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [623, 853]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||c53f561fb5663a9e45daae4f978adf04",
+  "fields": {
+    "value": "{\"name\": \"images/default_avatar.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [512, 512]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||cfa0a19f8b77a7e0aaa9e6bb41db2abd",
+  "fields": {
+    "value": "{\"name\": \"cache/4e/23/4e23bb2c8115a4fac64ae35a993931c5.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||d169137adba9f5d4995028f1bb255666",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||d272ea6655d9eb4117b6fc30175a0cb9",
+  "fields": {
+    "value": "{\"name\": \"cache/1f/ad/1fad48b66d6a3c25a7ec3ae6819d0c4f.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||d995d600ec9000c658b22ecfcc94cb0a",
+  "fields": {
+    "value": "{\"name\": \"cache/fe/fc/fefcb61d28334f8b8e1f0c35da7ccca8.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||dda829887c1ef9236e13b3e4b10240da",
+  "fields": {
+    "value": "{\"name\": \"cache/46/5d/465d9d3f0d92311bdfafc15dad110913.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||df913230cb4a9ab1671c0c7ebb17bc82",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1/\\u0421\\u043a\\u0430\\u043d_20230630_27.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [624, 855]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||e1bdebcc1416e163140695b99226eec4",
+  "fields": {
+    "value": "{\"name\": \"cache/83/1e/831efbf1e4632f5a73f140dd3c21f701.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||e73406fc7fe42bb986e0a9a82aaab174",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_xFcnEqH.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||ea495a7d25a89153e2ca8e6babd25fd6",
+  "fields": {
+    "value": "{\"name\": \"cache/2b/1b/2b1be69edf67165d8b1f91e451629130.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||ef92b30942db1390d3608b30ee9cf1b1",
+  "fields": {
+    "value": "{\"name\": \"avatars/user_1_qdvMJZr.png\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [2880, 1800]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||f25206c9856615e641d6bf8762749928",
+  "fields": {
+    "value": "{\"name\": \"cache/e0/7a/e07a44dbd39d2b03831bb5d8d140ebde.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||f8e4773204c59f7effc80b06b9267919",
+  "fields": {
+    "value": "{\"name\": \"cache/1c/24/1c2451245bd94453333f58e2ff0ab724.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||ff79622fdcc840c78b220990d9a0cbab",
+  "fields": {
+    "value": "{\"name\": \"cache/bb/ff/bbff1cf20db7ebef63b92628ddec2b53.jpg\", \"storage\": \"django.core.files.storage.FileSystemStorage\", \"size\": [300, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||021c12540643ef032fa8fe147b3b288a",
+  "fields": {
+    "value": "[\"4f6adf36049a1f7896b1fba4729d5064\", \"4bebbdd4dfd402464d255381ec89ad60\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||08a4277633bd32061d9f3b255cc5d29d",
+  "fields": {
+    "value": "[\"a3cc8adb7db73b0fe19f40dc7dae6eae\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||0afda0fcee87ec812e4f72970f269e50",
+  "fields": {
+    "value": "[\"4191563fe31b58a17947e2e2b4f4db9b\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||0b4ed0791ac13d3ab59923c6d3abdf9f",
+  "fields": {
+    "value": "[\"7b1d898242ea490837eb9c29a7fbcf8c\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||0ea682afba64a268574861da0c7a7798",
+  "fields": {
+    "value": "[\"85f3b34a518f6199a2b323f215d812f3\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||0f199844ca54eb0eaa2844014067c16e",
+  "fields": {
+    "value": "[\"19295e7b48853343b9aa96b77de53039\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||0f6b788569fcebf737fba73bad37bf0a",
+  "fields": {
+    "value": "[\"d995d600ec9000c658b22ecfcc94cb0a\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||0fb77ffac66f0e6ca09945ce5237a517",
+  "fields": {
+    "value": "[\"d272ea6655d9eb4117b6fc30175a0cb9\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||15b0dc5f30e20812d24e98a421bf1774",
+  "fields": {
+    "value": "[\"98d9ae4a1bce18a473a5791f40cb82c3\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||16d67c48cdefc572171bbd9508845b9c",
+  "fields": {
+    "value": "[\"61f14ac9f21b7dd31cb5387efb30e093\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||1754198f6f80db147004c68ee4fe3efe",
+  "fields": {
+    "value": "[\"cfa0a19f8b77a7e0aaa9e6bb41db2abd\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||1d66a102bb111b738f977711c6b50829",
+  "fields": {
+    "value": "[\"6c4581488be51b90cc1a23dec7ca593f\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||1daf401464c36f50628cd4c8b9e3027c",
+  "fields": {
+    "value": "[\"954ddea34bd7b8a809fa9d263f8a94b8\", \"964c9b8696fcb1d5b657a1198c2ed652\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||2305e0fd21821dac55154c2e66d46142",
+  "fields": {
+    "value": "[\"a5bc90153532c2c7f1dbd3ef94db05c8\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||2c5b2d9a7264b871491626e9278fbf25",
+  "fields": {
+    "value": "[\"3703f1f1f68f853e89e5811edea7c047\", \"0912147418e8f63e9628f676cf229495\", \"147312272410caf192a6f5548e3e56ef\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||366823f592ccb0bd7ee7c90ccd168905",
+  "fields": {
+    "value": "[\"ea495a7d25a89153e2ca8e6babd25fd6\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||3723320574e439e7bec5601628d71b9b",
+  "fields": {
+    "value": "[\"6ffb4c1423695bb38231f8fb927c3421\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||3a20e0342ab6efff879f937788ee8860",
+  "fields": {
+    "value": "[\"4aea5b1ac1b5f04aedc5d9a04baaaf53\", \"a325a9d7fa3e40a5ded62f935fb11de5\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||3b1b6319fa812615c7bb885a36611d7c",
+  "fields": {
+    "value": "[\"823365d2106b2955e6b3a64def4a71fb\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||519ac130361f86f113e677dc29075113",
+  "fields": {
+    "value": "[\"23091c615c6147342b1d78ad0f8baca4\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||62f03ba71d0f37c8c7869d498169f120",
+  "fields": {
+    "value": "[\"e1bdebcc1416e163140695b99226eec4\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||6852b6f9b2d3f50c393825dc994142f3",
+  "fields": {
+    "value": "[\"0af93b21bc5835b0dface6e5e8aae08d\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||6f81670c9432260291a180d1554e852a",
+  "fields": {
+    "value": "[\"1114a5ef607af5aa12bdb502b0e65d3f\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||71c191744a691da882b79960b830c115",
+  "fields": {
+    "value": "[\"41876dece818ee09c91307661d0529f1\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||7964b53fab50db8b07937f1536edd8ae",
+  "fields": {
+    "value": "[\"689e85d497f7362b66e040d4b05ae8d0\", \"ff79622fdcc840c78b220990d9a0cbab\", \"048248a711479fe6aefb822d875d8169\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||83f930b3a98dd3f9346f97ab2fe4b92c",
+  "fields": {
+    "value": "[\"7e4846fd77c48e1d3770d7d824328028\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||8466c6200a1557e74e0267de94fd4443",
+  "fields": {
+    "value": "[\"f25206c9856615e641d6bf8762749928\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||8bca2b3cc7e78273d309647592ceab41",
+  "fields": {
+    "value": "[\"b2f1e277feaae081326ecfa5c6dcde0a\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||9013af3b199ec47d8acd88d130c30b95",
+  "fields": {
+    "value": "[\"44c03ca91ae9b0a9397989d483d512bf\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||9e50713a5937aacfa02bc39e8b16a002",
+  "fields": {
+    "value": "[\"4000c8ead9f936bfb4251355fa4f8739\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||a0b1d1b8bf341647fb2592de0e2e9860",
+  "fields": {
+    "value": "[\"27e90ed46b114d3c914b3016d5e1678a\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||a70c732025f5175c2a6c7be5d542c412",
+  "fields": {
+    "value": "[\"9e187bf26b3229f23b7ed2572d4b8655\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||af5445a29d032a940d59ef6ecddc48af",
+  "fields": {
+    "value": "[\"50df9b1b9ae4167b66c7ffec575c2289\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||b03af47ed1c5ad7c940988f6eb220785",
+  "fields": {
+    "value": "[\"71991ca7050c52cb0a04470f9f7edbfe\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||b56fbc9fcf43f3370a6e98d1f812b6f3",
+  "fields": {
+    "value": "[\"6b1a25ee4026a4f2e928c17ce939b212\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||b70a2b4f673729c49ac7714ae203b6d1",
+  "fields": {
+    "value": "[\"11ad8a2f851787b903c32bf905604358\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||bd359eb296afacaea9ad1c8e157990f1",
+  "fields": {
+    "value": "[\"2c2428f1f9f3eaecf39c36bb161ed4f3\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||c15e51ebbc2c59ed8a6163faff5d56bc",
+  "fields": {
+    "value": "[\"92be864100680743aa2de499cd88659d\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||c53f561fb5663a9e45daae4f978adf04",
+  "fields": {
+    "value": "[\"156d454cf5db83598e646a19405dd699\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||d169137adba9f5d4995028f1bb255666",
+  "fields": {
+    "value": "[\"70623d0c74b7be1258a9b5673e3306ce\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||df913230cb4a9ab1671c0c7ebb17bc82",
+  "fields": {
+    "value": "[\"06a2618f18a5bb6ec42598efbb6d0240\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||e73406fc7fe42bb986e0a9a82aaab174",
+  "fields": {
+    "value": "[\"dda829887c1ef9236e13b3e4b10240da\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||ef92b30942db1390d3608b30ee9cf1b1",
+  "fields": {
+    "value": "[\"f8e4773204c59f7effc80b06b9267919\"]"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 1,
+  "fields": {
+    "name": "триллер",
+    "formatted_name": "триллер"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 2,
+  "fields": {
+    "name": "драма",
+    "formatted_name": "драма"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 3,
+  "fields": {
+    "name": "криминал",
+    "formatted_name": "криминал"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 4,
+  "fields": {
+    "name": "фантастика",
+    "formatted_name": "фантастика"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 5,
+  "fields": {
+    "name": "комедия",
+    "formatted_name": "комедия"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 6,
+  "fields": {
+    "name": "приключения",
+    "formatted_name": "приключения"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 7,
+  "fields": {
+    "name": "детектив",
+    "formatted_name": "детектив"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 8,
+  "fields": {
+    "name": "семейный",
+    "formatted_name": "семейный"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 9,
+  "fields": {
+    "name": "мультфильм",
+    "formatted_name": "мультфильм"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 10,
+  "fields": {
+    "name": "фэнтези",
+    "formatted_name": "фэнтези"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 11,
+  "fields": {
+    "name": "мелодрама",
+    "formatted_name": "мелодрама"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 12,
+  "fields": {
+    "name": "фантастика",
+    "formatted_name": "фантастика"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 13,
+  "fields": {
+    "name": "боевик",
+    "formatted_name": "боевик"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 14,
+  "fields": {
+    "name": "военный",
+    "formatted_name": "военный"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 15,
+  "fields": {
+    "name": "аниме",
+    "formatted_name": "аниме"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 16,
+  "fields": {
+    "name": "история",
+    "formatted_name": "история"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 17,
+  "fields": {
+    "name": "документальный",
+    "formatted_name": "документальный"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 18,
+  "fields": {
+    "name": "детский",
+    "formatted_name": "детский"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 19,
+  "fields": {
+    "name": "биография",
+    "formatted_name": "биография"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 20,
+  "fields": {
+    "name": "вестерн",
+    "formatted_name": "вестерн"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 21,
+  "fields": {
+    "name": "фильм-нуар",
+    "formatted_name": "фильмнуар"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 22,
+  "fields": {
+    "name": "спортивный",
+    "formatted_name": "спортивный"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 23,
+  "fields": {
+    "name": "короткометражный",
+    "formatted_name": "короткометражный"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 24,
+  "fields": {
+    "name": "мюзикл",
+    "formatted_name": "мюзикл"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 25,
+  "fields": {
+    "name": "ток-шоу",
+    "formatted_name": "токшоу"
+  }
+},
+{
+  "model": "genres.genre",
+  "pk": 26,
+  "fields": {
+    "name": "игры",
+    "formatted_name": "игры"
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 1,
+  "fields": {
+    "name": "Мистер Робот (сериал 2015 – 2019)",
+    "formatted_name": "мистерроботсериал2015–2019",
+    "description": "История молодого программиста Эллиота, страдающего социофобией и решившего, что единственный приемлемый для него способ взаимодействия с людьми — это профессия хакера. Таким образом, он быстро оказывается в том самом месте, где пересекаются интересы его работодателя — фирмы, занимающейся кибербезопасностью, — и подпольных организаций, которые пытаются его завербовать с целью обрушения самых могучих американских корпораций.",
+    "country": null,
+    "budget": null,
+    "image": "movies/movie_1/769126394bb5760f498ab5d345e5aa-1.jpg",
+    "created_at": "2015-03-17",
+    "uploaded_at": "2023-07-10",
+    "genre": [
+      1,
+      2,
+      3
+    ],
+    "actors": [],
+    "director": [],
+    "producer": [],
+    "screenwriter": [],
+    "operator": [],
+    "composer": [],
+    "artist": [],
+    "montage": []
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 2,
+  "fields": {
+    "name": "Назад в будущее (1985)",
+    "formatted_name": "назадвбудущее1985",
+    "description": "Подросток Марти с помощью машины времени, сооружённой его другом-профессором доком Брауном, попадает из 80-х в далекие 50-е. Там он встречается со своими будущими родителями, ещё подростками, и другом-профессором, совсем молодым.",
+    "country": null,
+    "budget": null,
+    "image": "movies/movie_2/back-to-the-future.format.jpeg",
+    "created_at": "1985-07-03",
+    "uploaded_at": "2023-07-11",
+    "genre": [
+      4,
+      5,
+      6
+    ],
+    "actors": [],
+    "director": [],
+    "producer": [],
+    "screenwriter": [],
+    "operator": [],
+    "composer": [],
+    "artist": [],
+    "montage": []
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 3,
+  "fields": {
+    "name": "Джентльмены удачи (1971)",
+    "formatted_name": "джентльменыудачи1971",
+    "description": "Заведующему детсадом Трошкину фатально не повезло: он оказался как две капли воды похож на бандита по кличке «Доцент», похитившего уникальный шлем Александра Македонского.\r\n\r\nМилиция внедряет добряка Трошкина в воровскую среду - и ему ничего не остается, кроме как старательно изображать своего двойника-злодея, путая всех окружающих. Со временем он настолько блестяще входит в роль, что сам начинает порой приходить в ужас. Между тем, жизни его угрожает смертельная опасность...",
+    "country": null,
+    "budget": null,
+    "image": "movies/movie_3/w1500_37666423.jpg",
+    "created_at": "1974-12-13",
+    "uploaded_at": "2023-07-10",
+    "genre": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "actors": [],
+    "director": [],
+    "producer": [],
+    "screenwriter": [],
+    "operator": [],
+    "composer": [],
+    "artist": [],
+    "montage": []
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 4,
+  "fields": {
+    "name": "Один дома (1990)",
+    "formatted_name": "одиндома1990",
+    "description": "Американское семейство отправляется из Чикаго в Европу, но в спешке сборов бестолковые родители забывают дома... одного из своих детей. Юное создание, однако, не теряется и демонстрирует чудеса изобретательности. И когда в дом залезают грабители, им приходится не раз пожалеть о встрече с милым крошкой.",
+    "country": null,
+    "budget": null,
+    "image": "movies/movie_4/scale_1200.jpeg",
+    "created_at": "1990-11-10",
+    "uploaded_at": "2023-07-10",
+    "genre": [
+      5,
+      8
+    ],
+    "actors": [],
+    "director": [],
+    "producer": [],
+    "screenwriter": [],
+    "operator": [],
+    "composer": [],
+    "artist": [],
+    "montage": []
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 5,
+  "fields": {
+    "name": "Шрек",
+    "formatted_name": "шрек",
+    "description": "Жил да был в сказочном государстве большой зеленый великан по имени Шрэк. Жил он в гордом одиночестве в лесу, на болоте, которое считал своим. Но однажды злобный коротышка — лорд Фаркуад, правитель волшебного королевства, безжалостно согнал на Шрэково болото всех сказочных обитателей.\r\n\r\nИ беспечной жизни зеленого великана пришел конец. Но лорд Фаркуад пообещал вернуть Шрэку болото, если великан добудет ему прекрасную принцессу Фиону, которая томится в неприступной башне, охраняемой огнедышащим драконом.",
+    "country": null,
+    "budget": null,
+    "image": "movies/movie_5/orig.jpeg",
+    "created_at": "2001-04-22",
+    "uploaded_at": "2023-07-10",
+    "genre": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      11
+    ],
+    "actors": [],
+    "director": [],
+    "producer": [],
+    "screenwriter": [],
+    "operator": [],
+    "composer": [],
+    "artist": [],
+    "montage": []
+  }
+},
+{
+  "model": "movies.movie",
+  "pk": 6,
+  "fields": {
+    "name": "Титаник (1997)",
+    "formatted_name": "титаник1997",
+    "description": "В первом и последнем плавании шикарного «Титаника» встречаются двое. Пассажир нижней палубы Джек выиграл билет в карты, а богатая наследница Роза отправляется в Америку, чтобы выйти замуж по расчёту. Чувства молодых людей только успевают расцвести, и даже не классовые различия создадут испытания влюблённым, а айсберг, вставший на пути считавшегося непотопляемым лайнера.",
+    "country": "США, Мексика",
+    "budget": 200000000,
+    "image": "movies/movie_6/обложка-титаник-007.jpg",
+    "created_at": "1997-11-01",
+    "uploaded_at": "2023-07-10",
+    "genre": [
+      1,
+      2,
+      11,
+      16
+    ],
+    "actors": [],
+    "director": [
+      1
+    ],
+    "producer": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "screenwriter": [
+      1
+    ],
+    "operator": [],
+    "composer": [],
+    "artist": [],
+    "montage": [
+      1
+    ]
+  }
+},
+{
+  "model": "persons.person",
+  "pk": 1,
+  "fields": {
+    "name": "Джеймс",
+    "surname": "Кэмерон",
+    "height": 188,
+    "date_of_birth": null,
+    "place_of_birth": "Капускасинг, Онтарио, Канада",
+    "image": "persons/person_1/default_avatar.png",
+    "career": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8
+    ],
+    "genres": [
+      4,
+      13,
+      17
+    ]
+  }
+},
+{
+  "model": "persons.person",
+  "pk": 2,
+  "fields": {
+    "name": "Памела",
+    "surname": "Исли",
+    "height": null,
+    "date_of_birth": null,
+    "place_of_birth": null,
+    "image": "images/default_avatar.png",
+    "career": [
+      3
+    ],
+    "genres": [
+      1,
+      5,
+      13
+    ]
+  }
+},
+{
+  "model": "persons.person",
+  "pk": 3,
+  "fields": {
+    "name": "Эл",
+    "surname": "Гиддингс",
+    "height": null,
+    "date_of_birth": null,
+    "place_of_birth": null,
+    "image": "images/default_avatar.png",
+    "career": [
+      1,
+      3,
+      4
+    ],
+    "genres": [
+      16,
+      17,
+      23
+    ]
+  }
+},
+{
+  "model": "persons.person",
+  "pk": 4,
+  "fields": {
+    "name": "Грант",
+    "surname": "Хилл",
+    "height": null,
+    "date_of_birth": null,
+    "place_of_birth": "Австралия",
+    "image": "images/default_avatar.png",
+    "career": [
+      3
+    ],
+    "genres": [
+      2,
+      12,
+      13
+    ]
+  }
+},
+{
+  "model": "persons.person",
+  "pk": 5,
+  "fields": {
+    "name": "Qqweqwe",
+    "surname": "qwe",
+    "height": 124,
+    "date_of_birth": "2023-07-22",
+    "place_of_birth": "awe",
+    "image": "images/default_avatar.png",
+    "career": [
+      1
+    ],
+    "genres": [
+      3
+    ]
+  }
+},
+{
+  "model": "rating.rating",
+  "pk": 1,
+  "fields": {
+    "movie": 4,
+    "user": 1,
+    "story": 10,
+    "acting": 10,
+    "music": 7,
+    "visual": 6,
+    "final": 8,
+    "total_rating": 8,
+    "comment": "norm",
+    "created_at": "2023-07-13T12:58:41.489Z"
+  }
+},
+{
+  "model": "rating.rating",
+  "pk": 2,
+  "fields": {
+    "movie": 6,
+    "user": 1,
+    "story": 10,
+    "acting": 10,
+    "music": 10,
+    "visual": 10,
+    "final": 10,
+    "total_rating": 10,
+    "comment": "super",
+    "created_at": "2023-07-13T13:17:21.977Z"
+  }
+},
+{
+  "model": "rating.rating",
+  "pk": 6,
+  "fields": {
+    "movie": 1,
+    "user": 1,
+    "story": 5,
+    "acting": 10,
+    "music": 7,
+    "visual": 10,
+    "final": 7,
+    "total_rating": 7,
+    "comment": "norm",
+    "created_at": "2023-07-21T13:31:35.851Z"
+  }
+},
+{
+  "model": "roles.role",
+  "pk": 1,
+  "fields": {
+    "name": "режиссер",
+    "formatted_name": "режиссер"
+  }
+},
+{
+  "model": "roles.role",
+  "pk": 2,
+  "fields": {
+    "name": "сценарист",
+    "formatted_name": "сценарист"
+  }
+},
+{
+  "model": "roles.role",
+  "pk": 3,
+  "fields": {
+    "name": "продюсер",
+    "formatted_name": "продюсер"
+  }
+},
+{
+  "model": "roles.role",
+  "pk": 4,
+  "fields": {
+    "name": "оператор",
+    "formatted_name": "оператор"
+  }
+},
+{
+  "model": "roles.role",
+  "pk": 5,
+  "fields": {
+    "name": "композитор",
+    "formatted_name": "композитор"
+  }
+},
+{
+  "model": "roles.role",
+  "pk": 6,
+  "fields": {
+    "name": "художник",
+    "formatted_name": "художник"
+  }
+},
+{
+  "model": "roles.role",
+  "pk": 7,
+  "fields": {
+    "name": "монтажер",
+    "formatted_name": "монтажер"
+  }
+},
+{
+  "model": "roles.role",
+  "pk": 8,
+  "fields": {
+    "name": "актер",
+    "formatted_name": "актер"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$mLYe2Yb9JAjfTeZzXLJsLu$ZAOmRWqqo41ohEBZBB7liUS7s7P3OVwguc/w9mrP0hI=",
+    "last_login": "2023-07-22T21:08:04.745Z",
+    "username": "admin",
+    "bio": "I am an admin!",
+    "email": "admin@admin.com",
+    "normalized_email": "admin@admin.com",
+    "image": "avatars/user_1/769126394bb5760f498ab5d345e5aa-1.jpg",
+    "date_joined": "2023-07-10T13:54:55.443Z",
+    "is_active": true,
+    "is_staff": true,
+    "is_superuser": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$HYFjwooiqZMRPlFvlaTtfx$Wz04+PMOzpHhlDP5U5PpO8xTZxyGc/ZHowdz8ILnAGs=",
+    "last_login": "2023-07-10T18:03:40.244Z",
+    "username": "marat",
+    "bio": "I am a first user!",
+    "email": "m@m.com",
+    "normalized_email": "m@m.com",
+    "image": "avatars/user_3/back-to-the-future.format.jpeg",
+    "date_joined": "2023-07-10T18:03:17.615Z",
+    "is_active": true,
+    "is_staff": true,
+    "is_superuser": false,
+    "groups": [],
+    "user_permissions": [
+      37,
+      38,
+      39,
+      40,
+      33,
+      34,
+      35,
+      36,
+      30,
+      32
+    ]
+  }
+}
+]

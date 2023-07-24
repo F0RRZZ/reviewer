@@ -3,6 +3,7 @@
 {% block title %}{{ feed_name | title }} movies {% endblock %}
 
 {% block content %}
+{% include "includes/persons_birthday_collapse.html" %}
 <div class="feed_selector" style="display: flex; flex-direction: row;">
     <h3 style="margin-left: 20px;">Feed:</h3>
     <select class="form-select form-select-sm" onchange="location = this.value"
@@ -13,10 +14,14 @@
         <option value="/best">Best</option>
     </select>
 </div>
+
 <div class="row" style="margin-bottom: 10px; margin-left: 10px; margin-right: 10px;">
     {% for movie in movies %}
     {% include "includes/movie_card.html" %}
     {% endfor %}
 </div>
+{{ persons_birthday }}
+
 {% include "includes/pagination_bar.html" %}
+
 {% endblock %}
