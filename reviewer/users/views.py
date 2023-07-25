@@ -1,20 +1,40 @@
+import smtplib
+
+import django.conf
+import django.core.mail
+import django.http
 import django.shortcuts
 import django.urls
+import django.utils.timezone
+import django.views
 import django.views.generic
 
 import users.forms
 import users.models
 
 
-class SignUpView(django.views.generic.CreateView):
-    form_class = users.forms.SignUpForm
-    success_url = '/'
-    template_name = 'users/signup.html'
-
-    def form_valid(self, form):
-        user = form.save(commit=False)
+class AccountActivationView(django.views.View):
+    def get(self, request, *args, **kwargs):
+        user = django.shortcuts.get_object_or_404(
+            users.models.User, username=self.kwargs['username']
+        )
+        if (
+            django.utils.timezone.now() - user.date_joined
+            > django.utils.timezone.timedelta(weeks=1)
+        ):
+            raise django.http.Http404
         user.is_active = True
-        return super().form_valid(form)
+        user.save()
+
+        return django.shortcuts.redirect(
+            django.urls.reverse_lazy('users:activation_done')
+        )
+
+
+class AccountActivationDoneView(
+    django.views.generic.TemplateView,
+):
+    template_name = 'users/activation_done.html'
 
 
 class ProfileView(django.views.generic.UpdateView):
@@ -36,3 +56,48 @@ class ProfileView(django.views.generic.UpdateView):
                 self.pk_url_kwarg: self.object.username,
             },
         )
+
+
+class SignUpView(django.views.generic.CreateView):
+    form_class = users.forms.SignUpForm
+    success_url = (
+        '/'
+        if django.conf.settings.USERS_AUTOACTIVATE
+        else django.urls.reverse_lazy('users:signup_done')
+    )
+    template_name = 'users/signup.html'
+
+    def form_valid(self, form):
+        user = form.save(commit=False)
+        if not django.conf.settings.USERS_AUTOACTIVATE:
+            absolute_uri = self.request.build_absolute_uri(
+                django.urls.reverse_lazy(
+                    'users:activation', args=[user.username]
+                )
+            )
+            try:
+                django.core.mail.send_mail(
+                    'Подтверждение регистрации',
+                    f'Здравствуйте, {user.username}!\n'
+                    f'Для активации аккаунта необходимо перейти'
+                    f'по ссылке: {absolute_uri}',
+                    django.conf.settings.EMAIL,
+                    [user.email],
+                    fail_silently=False,
+                )
+                user.is_active = False
+                user.save()
+            except smtplib.SMTPAuthenticationError:
+                user.is_active = True
+                user.save()
+                return django.shortcuts.redirect('/')
+        else:
+            user.is_active = True
+            user.save()
+        return super().form_valid(form)
+
+
+class SignUpDoneView(
+    django.views.generic.TemplateView,
+):
+    template_name = 'users/signup_done.html'

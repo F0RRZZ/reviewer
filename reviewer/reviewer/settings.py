@@ -15,14 +15,18 @@ env = environ.Env(
     DB_PORT=(str, '5432'),
     DB_USER=(str, 'postgres'),
     DEBUG=(bool, True),
+    EMAIL_ADDRESS=(str, 'example@gmail.com'),
+    EMAIL_APP_PASSWORD=(str, 'password'),
     REDIS_HOST=(str, '127.0.0.1'),
     REDIS_PORT=(str, '6379'),
     SECRET_KEY=(str, 'dummy-key'),
+    USERS_AUTOACTIVATE=(bool, True),
 )
 
 SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = env('DEBUG')
+USERS_AUTOACTIVATE = env('USERS_AUTOACTIVATE')
 
 ALLOWED_HOSTS = env('ALLOWED_HOSTS')
 
@@ -154,3 +158,12 @@ THUMBNAIL_DEBUG = True
 
 REDIS_HOST = env('REDIS_HOST')
 REDIS_PORT = env('REDIS_PORT')
+
+EMAIL = env('EMAIL_ADDRESS')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = EMAIL
+EMAIL_HOST_PASSWORD = env('EMAIL_APP_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

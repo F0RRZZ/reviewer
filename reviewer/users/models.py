@@ -46,6 +46,8 @@ class User(
         max_length=500,
         help_text='Maximum of 500 symbols',
         default='',
+        null=True,
+        blank=True,
     )
     email = django.db.models.EmailField(
         'email',

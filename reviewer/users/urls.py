@@ -65,6 +65,21 @@ urlpatterns = [
         name='signup',
     ),
     django.urls.path(
+        'signup/done/',
+        users.views.SignUpDoneView.as_view(),
+        name='signup_done',
+    ),
+    django.urls.path(
+        'activation/done/',
+        users.views.AccountActivationDoneView.as_view(),
+        name='activation_done',
+    ),
+    django.urls.path(
+        'activation/<str:username>/',
+        users.views.AccountActivationView.as_view(),
+        name='activation',
+    ),
+    django.urls.path(
         'profile/<str:username>/',
         users.views.ProfileView.as_view(),
         name='profile',
