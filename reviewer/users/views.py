@@ -11,6 +11,7 @@ import django.views.generic
 
 import users.forms
 import users.models
+import users.tasks
 
 
 class AccountActivationView(django.views.View):
@@ -76,17 +77,9 @@ class SignUpView(django.views.generic.CreateView):
                 )
             )
             try:
-                django.core.mail.send_mail(
-                    'Подтверждение регистрации',
-                    f'Здравствуйте, {user.username}!\n'
-                    f'Для активации аккаунта необходимо перейти'
-                    f'по ссылке: {absolute_uri}',
-                    django.conf.settings.EMAIL,
-                    [user.email],
-                    fail_silently=False,
+                users.tasks.send_email.delay(
+                    user.username, user.email, absolute_uri
                 )
-                user.is_active = False
-                user.save()
             except smtplib.SMTPAuthenticationError:
                 user.is_active = True
                 user.save()
