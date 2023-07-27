@@ -30,6 +30,7 @@ class Movie(core.base_models.NameFormatterBaseModel, core.mixins.ImageMixin):
         max_length=50,
         help_text='Maximum of 50 symbols',
         null=True,
+        blank=True,
     )
     actors = django.db.models.ManyToManyField(
         persons.models.Person,
@@ -74,6 +75,7 @@ class Movie(core.base_models.NameFormatterBaseModel, core.mixins.ImageMixin):
     budget = django.db.models.PositiveIntegerField(
         'budget',
         null=True,
+        blank=True,
     )
 
     def get_image_path(self, filename: str) -> str:

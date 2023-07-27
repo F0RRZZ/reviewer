@@ -2,7 +2,7 @@
 
 {% block title %}Genres{% endblock %}
 
-{% cache 60 genres %}
+{% block content %}
 {% for genre in genres %}
 <div class="justify-content-center" style="margin-bottom: 10px; margin-left: 10px; margin-right: 10px;">
     {% include "includes/genre_card.html" %}

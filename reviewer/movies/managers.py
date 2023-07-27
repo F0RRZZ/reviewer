@@ -1,4 +1,6 @@
 import django.db.models
+import django.db.models.fields
+import django.db.models.functions
 
 import genres.models
 import movies.models
@@ -29,7 +31,11 @@ class MovieManager(django.db.models.Manager):
         return (
             self.get_with_genres()
             .annotate(
-                avg_rating=django.db.models.Avg('score_movie__total_rating')
+                avg_rating=django.db.models.functions.Coalesce(
+                    django.db.models.Avg('score_movie__total_rating'),
+                    django.db.models.Value(0),
+                    output_field=django.db.models.fields.FloatField(),
+                )
             )
             .order_by('-avg_rating')
         )
