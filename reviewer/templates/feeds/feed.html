@@ -14,12 +14,19 @@
     </select>
 </div>
 
+<form action="{% url 'feeds:search' %}" method="get">
+    <div class="search-box" style="margin-left: 20px; margin-bottom: 10px;">
+        <input type="search" name="q" placeholder="Search">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+
 <div class="row" style="margin-bottom: 10px; margin-left: 10px; margin-right: 10px;">
     {% for movie in movies %}
     {% include "includes/movie_card.html" %}
     {% endfor %}
 </div>
 
-{% include "includes/pagination_bar.html" %}
+{% include "incl`udes/pagination_bar.html" %}
 
 {% endblock %}
