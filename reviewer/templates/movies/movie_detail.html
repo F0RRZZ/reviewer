@@ -174,7 +174,14 @@
     </div>
     <div class="raiting-info">
         <h3 style="text-align: center;">Общий рейтинг:</h3>
-        <h1 style="text-align: center;">{{ avg_rating }}</h1>
+        <h1 style="text-align: center;">{{ avg_total_rating }}</h1>
+        <p style="font-size: 13px; text-align: center;">
+            Story: {{ avg_story_rating }} |
+            Acting: {{ avg_acting_rating }} |
+            Music: {{ avg_music_rating }} |
+            Visual: {{ avg_visual_rating }} |
+            Final: {{ avg_final_rating }}
+        </p>
         <hr>
         <h2>Your review:</h2>
         <form method="post" enctype="multipart/form-data">

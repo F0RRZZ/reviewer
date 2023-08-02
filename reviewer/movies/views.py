@@ -63,7 +63,28 @@ class MovieDetailView(django.views.generic.DetailView):
         context['movie'] = movie
         context['review_exists'] = review is not None
         context['paginator'], context['page_obj'] = self.get_paginator()
-        context['avg_rating'] = rating.models.Rating.objects.get_avg(movie.id)
+        context['avg_total_rating'] = rating.models.Rating.objects.get_avg(
+            movie.id, rating.models.Rating.total_rating.field.name
+        )
+        context['avg_story_rating'] = rating.models.Rating.objects.get_avg(
+            movie.id, rating.models.Rating.story.field.name
+        )
+        context['avg_acting_rating'] = rating.models.Rating.objects.get_avg(
+            movie.id,
+            rating.models.Rating.acting.field.name,
+        )
+        context['avg_music_rating'] = rating.models.Rating.objects.get_avg(
+            movie.id,
+            rating.models.Rating.music.field.name,
+        )
+        context['avg_visual_rating'] = rating.models.Rating.objects.get_avg(
+            movie.id,
+            rating.models.Rating.visual.field.name,
+        )
+        context['avg_final_rating'] = rating.models.Rating.objects.get_avg(
+            movie.id,
+            rating.models.Rating.final.field.name,
+        )
         context['form'] = rating.forms.RatingForm(
             initial=self.get_review_form_initial_data(review=review)
         )

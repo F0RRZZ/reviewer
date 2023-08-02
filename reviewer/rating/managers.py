@@ -1,15 +1,13 @@
 import django.db.models
 
-import rating.models
-
 
 class RatingManager(django.db.models.Manager):
-    def get_avg(self, movie_id):
+    def get_avg(self, movie_id: int, evaluation_parameter: str):
         avg = (
             self.filter(movie_id=movie_id)
             .aggregate(
                 avg=django.db.models.Avg(
-                    rating.models.Rating.total_rating.field.name,
+                    evaluation_parameter,
                 )
             )
             .get('avg')
