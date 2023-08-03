@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Username</th>
+            <th scope="col">Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ user.username }}</td>
+            <td><a class="btn btn-primary" href="{% url 'users:profile' user.username %}">Profile</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% include "includes/pagination_bar.html" %}
+
+{% endblock %}

@@ -84,4 +84,9 @@ urlpatterns = [
         users.views.ProfileView.as_view(),
         name='profile',
     ),
+    django.urls.path(
+        'list/',
+        users.views.UserListView.as_view(),
+        name='userlist',
+    ),
 ]

@@ -81,6 +81,18 @@ class Movie(core.base_models.NameFormatterBaseModel, core.mixins.ImageMixin):
     def get_image_path(self, filename: str) -> str:
         return f'movies/movie_{self.id}/{filename}'
 
+    kinopoisk_link = django.db.models.CharField(
+        'kinopoisk_link',
+        max_length=500,
+        null=True,
+        blank=True,
+    )
+    imdb_link = django.db.models.CharField(
+        'imdb_link',
+        max_length=500,
+        null=True,
+        blank=True,
+    )
     image = django.db.models.ImageField(
         'image',
         upload_to=get_image_path,

@@ -94,3 +94,11 @@ class SignUpDoneView(
     django.views.generic.TemplateView,
 ):
     template_name = 'users/signup_done.html'
+
+
+class UserListView(django.views.generic.ListView):
+    context_object_name = 'users'
+    paginate_by = 30
+    queryset = users.models.User.objects.all().order_by(
+        users.models.User.username.field.name,
+    )

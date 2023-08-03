@@ -21,6 +21,8 @@ class MoviesAdmin(django.contrib.admin.ModelAdmin):
         movies.models.Movie.montage.field.name,
         movies.models.Movie.actors.field.name,
         movies.models.Movie.budget.field.name,
+        movies.models.Movie.kinopoisk_link.field.name,
+        movies.models.Movie.imdb_link.field.name,
     )
     filter_horizontal = (
         movies.models.Movie.genre.field.name,
