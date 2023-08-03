@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-header">
+        Story: {{ review.story }} |
+        Acting: {{ review.acting }} |
+        Music: {{ review.music }} |
+        Visual: {{ review.visual }} |
+        Final: {{ review.final }} ||
+        <b>Total: {{ review.total_rating }}</b>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title"><a href="{% url 'users:profile' review.user %}">{{ review.user }}</a></h5>
+        <p class="card-text">{{ review.comment }}</p>
+    </div>
+    <div class="card-footer text-muted">{{ review.created_at }}</div>
+</div>

@@ -16,6 +16,11 @@
     td {
         padding: 10px;
     }
+    .card {
+        margin-left: 20px;
+        margin-right: 100px;
+        margin-bottom: 20px;
+    }
 </style>
 {% endblock %}
 
@@ -118,6 +123,22 @@
                     {% endif %}
                 </td>
             </tr>
+            <td>Artists:</td>
+                <td>
+                    {% if movie.artist.all %}
+                    {% for artist in movie.artist.all|slice:":3" %}
+                    <a href="{% url 'persons:person_detail' artist.id %}">
+                        {% if forloop.last %}
+                        {{ artist.name }} {{ artist.surname }}
+                        {% else %}
+                        {{ artist.name }} {{ artist.surname }},
+                        {% endif %}
+                    </a>
+                    {% endfor %}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
             <tr>
                 <td>Operator:</td>
                 <td>
@@ -216,21 +237,7 @@
     {% if page_obj %}
     <h2 style="margin-left: 20px;">Other reviews:</h2>
     {% for review in page_obj %}
-    <div class="card" style="margin-left: 20px; margin-right: 200px; margin-bottom: 20px;">
-        <div class="card-header">
-            Story: {{ review.story }} |
-            Acting: {{ review.acting }} |
-            Music: {{ review.music }} |
-            Visual: {{ review.visual }} |
-            Final: {{ review.final }} ||
-            <b>Total: {{ review.total_rating }}</b>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title"><a href="{% url 'users:profile' review.user %}">{{ review.user }}</a></h5>
-            <p class="card-text">{{ review.comment }}</p>
-        </div>
-        <div class="card-footer text-muted">{{ review.created_at }}</div>
-    </div>
+    {% include "includes/review_card.html" %}
     {% endfor %}
     {% endif %}
 </div>

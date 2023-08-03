@@ -2,6 +2,7 @@ import smtplib
 
 import django.conf
 import django.core.mail
+import django.core.paginator
 import django.http
 import django.shortcuts
 import django.urls
@@ -9,6 +10,7 @@ import django.utils.timezone
 import django.views
 import django.views.generic
 
+import rating.models
 import users.forms
 import users.models
 import users.tasks
@@ -41,8 +43,23 @@ class AccountActivationDoneView(
 class ProfileView(django.views.generic.UpdateView):
     context_object_name = 'profile_owner'
     form_class = users.forms.ProfileForm
+    paginate_by = 10
     pk_url_kwarg = 'username'
     template_name = 'users/profile.html'
+
+    def get_paginator(self):
+        user = self.get_object()
+        reviews = (
+            rating.models.Rating.objects
+            .prefetch_related(rating.models.Rating.movie.field.name)
+            .filter(user_id=user.id)
+        )
+        paginator = django.core.paginator.Paginator(
+            reviews,
+            self.paginate_by,
+        )
+        page_obj = paginator.get_page(self.request.GET.get('page', 1))
+        return paginator, page_obj
 
     def get_object(self):
         return django.shortcuts.get_object_or_404(
@@ -57,6 +74,11 @@ class ProfileView(django.views.generic.UpdateView):
                 self.pk_url_kwarg: self.object.username,
             },
         )
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['paginator'], context['page_obj'] = self.get_paginator()
+        return context
 
 
 class SignUpView(django.views.generic.CreateView):

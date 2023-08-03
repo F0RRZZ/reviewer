@@ -2,7 +2,17 @@
 
 {% block title %}{{ profile_owner.username }}'s profile{% endblock %}
 
+{% block head %}
+<style>
+.card {
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+</style>
+{% endblock %}
+
 {% block content %}
+<div class="profile" style="display: flex; flex-direction: row;">
 {% if user.id == profile_owner.id %}
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
@@ -33,4 +43,17 @@
     {% endif %}
 </div>
 {% endif %}
+<div class="comments">
+    <h2>Reviews:</h2>
+    {% if page_obj %}
+    {% for review in page_obj %}
+    {% include "includes/review_card.html" %}
+    {% endfor %}
+    {% else %}
+    <h5>No reviews found</h5>
+    {% endif %}
+
+    {% include "includes/pagination_bar.html" %}
+</div>
+</div>
 {% endblock %}
