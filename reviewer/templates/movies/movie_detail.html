@@ -26,17 +26,23 @@
 
 {% block content %}
 <div class="movie" style="display: flex; flex-direction: row; margin-left: 100px; margin-right: 100px;">
-    <div class="images_and_links">
+    <div class="images_links">
         <img src="{{ movie.get_image_300x300 }}" height="40%" />
         <div class="links">
             {% if movie.kinopoisk_link %}
             <a href="{{ movie.kinopoisk_link }}"><img src="/media/images/kinopoisk.png" width="50%"
                     style="padding-top: 10px;"></a>
             {% endif %}
+            <br>
             {% if movie.imdb_link %}
             <a href="{{ movie.imdb_link }}"><img src="/media/images/imdb_informer.png" style="padding-top: 10px;"
                     width="50%"></a>
             {% endif %}
+        </div>
+        <br>
+        <div class="description" style="width: 350px;">
+            <h5>Description:</h5>
+            <p>{{ movie.description }}</p>
         </div>
     </div>
     <div class="movie-info" style="margin-left: 80px;">
@@ -206,7 +212,7 @@
         </table>
     </div>
     <div class="raiting-info">
-        <h3 style="text-align: center;">Общий рейтинг:</h3>
+        <h3 style="text-align: center;">Total rating:</h3>
         <h1 style="text-align: center;">{{ avg_total_rating }}</h1>
         <p style="font-size: 13px; text-align: center;">
             Story: {{ avg_story_rating }} |

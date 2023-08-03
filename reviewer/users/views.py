@@ -49,11 +49,9 @@ class ProfileView(django.views.generic.UpdateView):
 
     def get_paginator(self):
         user = self.get_object()
-        reviews = (
-            rating.models.Rating.objects
-            .prefetch_related(rating.models.Rating.movie.field.name)
-            .filter(user_id=user.id)
-        )
+        reviews = rating.models.Rating.objects.prefetch_related(
+            rating.models.Rating.movie.field.name
+        ).filter(user_id=user.id)
         paginator = django.core.paginator.Paginator(
             reviews,
             self.paginate_by,

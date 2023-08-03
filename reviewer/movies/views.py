@@ -46,11 +46,9 @@ class MovieDetailView(django.views.generic.DetailView):
         return initial
 
     def get_paginator(self):
-        reviews = (
-            rating.models.Rating.objects
-            .select_related(rating.models.Rating.user.field.name)
-            .filter(movie_id=self.kwargs[self.pk_url_kwarg])
-        )
+        reviews = rating.models.Rating.objects.select_related(
+            rating.models.Rating.user.field.name
+        ).filter(movie_id=self.kwargs[self.pk_url_kwarg])
         paginator = django.core.paginator.Paginator(
             reviews,
             self.paginate_by,
