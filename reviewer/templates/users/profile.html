@@ -5,7 +5,7 @@
 {% block head %}
 <style>
 .card {
-    margin-right: 30px;
+    margin-right: 10px;
     margin-bottom: 20px;
 }
 </style>
@@ -16,7 +16,7 @@
 {% if user.id == profile_owner.id %}
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <div class="form-group" style="padding-left: 300px; padding-right: 300px;">
+    <div class="form-group" style="padding-left: 50px; padding-right: 100px;">
         <img src="{{ profile_owner.get_image_300x300 }}" width="300" height="300"
             style="border: 1px solid black" /><br />
         {% for field in form %}
@@ -28,7 +28,7 @@
     <input type="submit" value="Submit" class="btn btn-primary" style="margin-left: 300px; margin-right: 300px;">
 </form>
 {% else %}
-<div class="profile" style="padding-left: 300px; padding-right: 300px;">
+<div class="profile" style="padding-left: 50px; padding-right: 100px;">
     <img src="{{ profile_owner.get_image_300x300 }}" width="300" height="300" style="border: 1px solid black" /><br />
     <div class="render_username" style="display: flex; flex-direction: row;">
         {% if profile_owner.is_staff %}
@@ -43,7 +43,7 @@
     {% endif %}
 </div>
 {% endif %}
-<div class="comments">
+<div class="reviews">
     <h2>Reviews:</h2>
     {% if page_obj %}
     {% for review in page_obj %}
