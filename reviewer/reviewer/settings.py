@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # installed apps
     'django_cleanup.apps.CleanupConfig',
+    'rest_framework',
     'sorl.thumbnail',
     'widget_tweaks',
     # created apps
+    'api.apps.ApiConfig',
     'genres.apps.GenresConfig',
     'feeds.apps.FeedsConfig',
     'movies.apps.MoviesConfig',

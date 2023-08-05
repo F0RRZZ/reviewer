@@ -32,7 +32,7 @@ class MovieManager(django.db.models.Manager):
             self.get_with_genres()
             .annotate(
                 avg_rating=django.db.models.functions.Coalesce(
-                    django.db.models.Avg('score_movie__total_rating'),
+                    django.db.models.Avg('movies_reviews__total_rating'),
                     django.db.models.Value(0),
                     output_field=django.db.models.fields.FloatField(),
                 )

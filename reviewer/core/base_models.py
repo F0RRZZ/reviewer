@@ -10,14 +10,12 @@ class NameFormatterBaseModel(django.db.models.Model):
 
     def save(self, *args, **kwargs):
         self.formatted_name = core.tools.name_formatter(self.name)
-        return super().save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     def clean(self):
         formatted_name = core.tools.name_formatter(self.name)
         if self.__class__.objects.filter(
-            formatted_name=formatted_name,
-        ):
-            return django.core.validators.ValidationError(
-                'The name must be unique',
-            )
+            formatted_name=formatted_name
+        ).exists():
+            raise django.core.validators.ValidationError('Name must be unique')
         return self.name

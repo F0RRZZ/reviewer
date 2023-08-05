@@ -19,12 +19,12 @@ class Rating(django.db.models.Model):
     movie = django.db.models.ForeignKey(
         movies.models.Movie,
         on_delete=django.db.models.CASCADE,
-        related_name='score_movie',
+        related_name='movies_reviews',
     )
     user = django.db.models.ForeignKey(
         users.models.User,
         on_delete=django.db.models.CASCADE,
-        related_name='score_user',
+        related_name='users_reviews',
     )
     story = django.db.models.PositiveSmallIntegerField(
         default=ScoreData.DEFAULT,

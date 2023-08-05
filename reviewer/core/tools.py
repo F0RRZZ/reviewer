@@ -1,7 +1,4 @@
-import pytz
 import string
-
-import django.utils
 
 
 def name_formatter(name):
@@ -22,7 +19,7 @@ def name_formatter(name):
         'e': 'е',
         'k': 'к',
         'o': 'o',
-        'p': '',
+        'p': 'р',
         'x': 'х',
         'y': 'у',
     }
@@ -30,12 +27,6 @@ def name_formatter(name):
     for symbol in string.punctuation:
         formatted_name = formatted_name.replace(symbol, '')
     for en_letter, ru_letter in similiar_letters.items():
-        formatted_name.replace(en_letter, ru_letter)
+        formatted_name = formatted_name.replace(en_letter, ru_letter)
     formatted_name = formatted_name.replace(' ', '')
     return formatted_name
-
-
-def get_today_date(request):
-    timezone = pytz.timezone(request.session.get('django_timezone', 'UTC'))
-    today = django.utils.timezone.now().astimezone(timezone).date()
-    return today

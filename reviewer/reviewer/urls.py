@@ -21,6 +21,10 @@ urlpatterns = [
         'user/',
         django.urls.include('django.contrib.auth.urls'),
     ),
+    django.urls.path(
+        'api/v1/',
+        django.urls.include('api.urls'),
+    ),
     django.urls.path('admin/', django.contrib.admin.site.urls),
 ] + (
     django.conf.urls.static.static(
