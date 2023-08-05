@@ -3,6 +3,14 @@
 {% block title %}Userlist{% endblock %}
 
 {% block content %}
+
+<form action="{% url 'users:search' %}" method="get">
+    <div class="search-box" style="margin-left: 20px; margin-bottom: 10px;">
+        <input type="search" name="q" placeholder="Search">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+
 <table class="table table-striped">
     <thead>
         <tr>

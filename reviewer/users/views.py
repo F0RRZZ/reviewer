@@ -10,6 +10,7 @@ import django.utils.timezone
 import django.views
 import django.views.generic
 
+import core.mixins
 import rating.models
 import users.forms
 import users.models
@@ -122,3 +123,16 @@ class UserListView(django.views.generic.ListView):
     queryset = users.models.User.objects.all().order_by(
         users.models.User.username.field.name,
     )
+
+
+class SearchView(
+    django.views.generic.ListView,
+    core.mixins.SearchViewMixin,
+):
+    context_object_name = 'users'
+    paginate_by = 30
+
+    def get_queryset(self):
+        return users.models.User.objects.filter(
+            username__icontains=self.request.GET.get('q')
+        )

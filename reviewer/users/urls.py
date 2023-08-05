@@ -89,4 +89,9 @@ urlpatterns = [
         users.views.UserListView.as_view(),
         name='userlist',
     ),
+    django.urls.path(
+        'search/',
+        users.views.SearchView.as_view(),
+        name='search',
+    ),
 ]
