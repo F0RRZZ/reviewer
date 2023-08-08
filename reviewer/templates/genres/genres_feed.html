@@ -3,6 +3,14 @@
 {% block title %}Genres{% endblock %}
 
 {% block content %}
+<form action="{% url 'genres:search' %}" method="get">
+    <div class="search-box" style="margin-left: 20px; margin-bottom: 10px;">
+        <input type="search" name="q" placeholder="Search">
+        <button type="submit" class="btn btn-primary">Search</button>
+        <a href="{% url 'genres:genres' %}" class="btn btn-danger">Reset</a>
+    </div>
+</form>
+
 {% for genre in genres %}
 <div class="justify-content-center" style="margin-bottom: 10px; margin-left: 10px; margin-right: 10px;">
     {% include "includes/genre_card.html" %}

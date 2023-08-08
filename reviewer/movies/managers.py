@@ -50,4 +50,5 @@ class MovieManager(django.db.models.Manager):
             movies.models.Movie.composer.field.name,
             movies.models.Movie.artist.field.name,
             movies.models.Movie.montage.field.name,
+            movies.models.Movie.genre.field.name,
         )

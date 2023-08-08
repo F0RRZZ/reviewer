@@ -88,6 +88,9 @@
                         {% endif %}
                     </a>
                     {% endfor %}
+                    {% if movie.director.count > 3 %}
+                    <a href="{% url 'movies:movie_director' movie.id %}">, ...</a>
+                    {% endif %}
                     {% else %}
                     -
                     {% endif %}
@@ -106,6 +109,9 @@
                         {% endif %}
                     </a>
                     {% endfor %}
+                    {% if movie.screenwriter.count > 3 %}
+                    <a href="{% url 'movies:movie_screenwriter' movie.id %}">, ...</a>
+                    {% endif %}
                     {% else %}
                     -
                     {% endif %}
@@ -124,6 +130,9 @@
                         {% endif %}
                     </a>
                     {% endfor %}
+                    {% if movie.producer.count > 3 %}
+                    <a href="{% url 'movies:movie_producers' movie.id %}">, ...</a>
+                    {% endif %}
                     {% else %}
                     -
                     {% endif %}
@@ -141,6 +150,9 @@
                         {% endif %}
                     </a>
                     {% endfor %}
+                    {% if movie.artist.count > 3 %}
+                    <a href="{% url 'movies:movie_artists' movie.id %}">, ...</a>
+                    {% endif %}
                     {% else %}
                     -
                     {% endif %}
@@ -158,6 +170,9 @@
                         {% endif %}
                     </a>
                     {% endfor %}
+                    {% if movie.operator.count > 3 %}
+                    <a href="{% url 'movies:movie_operators' movie.id %}">, ...</a>
+                    {% endif %}
                     {% else %}
                     -
                     {% endif %}
@@ -176,6 +191,9 @@
                         {% endif %}
                     </a>
                     {% endfor %}
+                    {% if movie.composer.count > 3 %}
+                    <a href="{% url 'movies:movie_composers' movie.id %}">, ...</a>
+                    {% endif %}
                     {% else %}
                     -
                     {% endif %}
@@ -194,6 +212,9 @@
                         {% endif %}
                     </a>
                     {% endfor %}
+                    {% if movie.montage.count > 3 %}
+                    <a href="{% url 'movies:movie_editors' movie.id %}">, ...</a>
+                    {% endif %}
                     {% else %}
                     -
                     {% endif %}

@@ -90,7 +90,7 @@ urlpatterns = [
         name='userlist',
     ),
     django.urls.path(
-        'search/',
+        'list/search/',
         users.views.SearchView.as_view(),
         name='search',
     ),

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}{{ staff_type | title }}{% endblock %}
+
+{% block content %}
+<form action="{% url 'movies:search' movie_id staff_type %}" method="get">
+    <div class="search-box" style="margin-left: 20px; margin-bottom: 10px;">
+        <input type="search" name="q" placeholder="Search">
+        <button type="submit" class="btn btn-primary">Search</button>
+        {% if staff_type == 'actors' %}
+        <a href="{% url 'movies:movie_actors' movie_id %}" class="btn btn-danger">Reset</a>
+        {% elif staff_type == 'directors' %}
+        <a href="{% url 'movies:movie_directors' movie_id %}" class="btn btn-danger">Reset</a>
+        {% elif staff_type == 'producers' %}
+        <a href="{% url 'movies:movie_producers' movie_id %}" class="btn btn-danger">Reset</a>
+        {% elif staff_type == 'screenwriters' %}
+        <a href="{% url 'movies:movie_screenwriters' movie_id %}" class="btn btn-danger">Reset</a>
+        {% elif staff_type == 'operators' %}
+        <a href="{% url 'movies:movie_operators' movie_id %}" class="btn btn-danger">Reset</a>
+        {% elif staff_type == 'composers' %}
+        <a href="{% url 'movies:movie_composers' movie_id %}" class="btn btn-danger">Reset</a>
+        {% elif staff_type == 'artists' %}
+        <a href="{% url 'movies:movie_artists' movie_id %}" class="btn btn-danger">Reset</a>
+        {% elif staff_type == 'editors' %}
+        <a href="{% url 'movies:movie_editors' movie_id %}" class="btn btn-danger">Reset</a>
+        {% endif %}
+    </div>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for person in persons %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td><img src="{{ person.get_image_50x50 }}"/></td>
+            <td>{{ person.name }}</td>
+            <td>{{ person.surname }}</td>
+            <td><a class="btn btn-primary" href="{% url 'persons:person_detail' person.id %}">Details</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+{% endblock %}
