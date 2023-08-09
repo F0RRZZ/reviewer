@@ -8,9 +8,11 @@
     "description": "История молодого программиста Эллиота, страдающего социофобией и решившего, что единственный приемлемый для него способ взаимодействия с людьми — это профессия хакера. Таким образом, он быстро оказывается в том самом месте, где пересекаются интересы его работодателя — фирмы, занимающейся кибербезопасностью, — и подпольных организаций, которые пытаются его завербовать с целью обрушения самых могучих американских корпораций.",
     "country": null,
     "budget": null,
+    "kinopoisk_link": "https://www.kinopoisk.ru/series/859908/",
+    "imdb_link": "https://www.imdb.com/title/tt4158110/?ref_=fn_al_tt_1",
     "image": "movies/movie_1/769126394bb5760f498ab5d345e5aa-1.jpg",
     "created_at": "2015-03-17",
-    "uploaded_at": "2023-07-10",
+    "uploaded_at": "2023-07-27",
     "genre": [
       1,
       2,
@@ -35,6 +37,8 @@
     "description": "Подросток Марти с помощью машины времени, сооружённой его другом-профессором доком Брауном, попадает из 80-х в далекие 50-е. Там он встречается со своими будущими родителями, ещё подростками, и другом-профессором, совсем молодым.",
     "country": null,
     "budget": null,
+    "kinopoisk_link": "https://www.kinopoisk.ru/film/476/",
+    "imdb_link": "https://www.imdb.com/title/tt0088763/?ref_=fn_al_tt_1",
     "image": "movies/movie_2/back-to-the-future.format.jpeg",
     "created_at": "1985-07-03",
     "uploaded_at": "2023-07-11",
@@ -62,6 +66,8 @@
     "description": "Заведующему детсадом Трошкину фатально не повезло: он оказался как две капли воды похож на бандита по кличке «Доцент», похитившего уникальный шлем Александра Македонского.\r\n\r\nМилиция внедряет добряка Трошкина в воровскую среду - и ему ничего не остается, кроме как старательно изображать своего двойника-злодея, путая всех окружающих. Со временем он настолько блестяще входит в роль, что сам начинает порой приходить в ужас. Между тем, жизни его угрожает смертельная опасность...",
     "country": null,
     "budget": null,
+    "kinopoisk_link": "https://www.kinopoisk.ru/film/44386/",
+    "imdb_link": "https://www.imdb.com/title/tt0068519/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_%25D0%25B4%25D0%25B6%25D0%25B5%25D0%25BD%25D1%2582%25D0%25B5",
     "image": "movies/movie_3/w1500_37666423.jpg",
     "created_at": "1974-12-13",
     "uploaded_at": "2023-07-10",
@@ -90,12 +96,14 @@
     "description": "Американское семейство отправляется из Чикаго в Европу, но в спешке сборов бестолковые родители забывают дома... одного из своих детей. Юное создание, однако, не теряется и демонстрирует чудеса изобретательности. И когда в дом залезают грабители, им приходится не раз пожалеть о встрече с милым крошкой.",
     "country": null,
     "budget": null,
+    "kinopoisk_link": "https://www.kinopoisk.ru/film/8124/",
+    "imdb_link": "https://www.imdb.com/title/tt0099785/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_%25D0%25BE%25D0%25B4%25D0%25B8%25D0%25BD%2520%25D0%25B4%25D0%25BE%25D0%25BC%25D0%25B0",
     "image": "movies/movie_4/scale_1200.jpeg",
     "created_at": "1990-11-10",
     "uploaded_at": "2023-07-10",
     "genre": [
-      5,
-      8
+      8,
+      5
     ],
     "actors": [],
     "director": [],
@@ -116,6 +124,8 @@
     "description": "Жил да был в сказочном государстве большой зеленый великан по имени Шрэк. Жил он в гордом одиночестве в лесу, на болоте, которое считал своим. Но однажды злобный коротышка — лорд Фаркуад, правитель волшебного королевства, безжалостно согнал на Шрэково болото всех сказочных обитателей.\r\n\r\nИ беспечной жизни зеленого великана пришел конец. Но лорд Фаркуад пообещал вернуть Шрэку болото, если великан добудет ему прекрасную принцессу Фиону, которая томится в неприступной башне, охраняемой огнедышащим драконом.",
     "country": null,
     "budget": null,
+    "kinopoisk_link": "https://www.kinopoisk.ru/film/430/",
+    "imdb_link": "https://www.imdb.com/title/tt0126029/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_%25D1%2588%25D1%2580%25D0%25B5%25D0%25BA",
     "image": "movies/movie_5/orig.jpeg",
     "created_at": "2001-04-22",
     "uploaded_at": "2023-07-10",
@@ -146,14 +156,16 @@
     "description": "В первом и последнем плавании шикарного «Титаника» встречаются двое. Пассажир нижней палубы Джек выиграл билет в карты, а богатая наследница Роза отправляется в Америку, чтобы выйти замуж по расчёту. Чувства молодых людей только успевают расцвести, и даже не классовые различия создадут испытания влюблённым, а айсберг, вставший на пути считавшегося непотопляемым лайнера.",
     "country": "США, Мексика",
     "budget": 200000000,
+    "kinopoisk_link": "https://www.kinopoisk.ru/film/2213/?ysclid=lku3o4ceq7715793117",
+    "imdb_link": "https://www.imdb.com/title/tt0120338/?ref_=ext_shr_lnk",
     "image": "movies/movie_6/обложка-титаник-007.jpg",
     "created_at": "1997-11-01",
     "uploaded_at": "2023-07-10",
     "genre": [
+      16,
       1,
       2,
-      11,
-      16
+      11
     ],
     "actors": [],
     "director": [
@@ -385,55 +397,6 @@
   }
 },
 {
-  "model": "users.user",
-  "pk": 1,
-  "fields": {
-    "password": "pbkdf2_sha256$260000$mLYe2Yb9JAjfTeZzXLJsLu$ZAOmRWqqo41ohEBZBB7liUS7s7P3OVwguc/w9mrP0hI=",
-    "last_login": "2023-07-22T21:08:04.745Z",
-    "username": "admin",
-    "bio": "I am an admin!",
-    "email": "admin@admin.com",
-    "normalized_email": "admin@admin.com",
-    "image": "avatars/user_1/769126394bb5760f498ab5d345e5aa-1.jpg",
-    "date_joined": "2023-07-10T13:54:55.443Z",
-    "is_active": true,
-    "is_staff": true,
-    "is_superuser": true,
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "users.user",
-  "pk": 3,
-  "fields": {
-    "password": "pbkdf2_sha256$260000$HYFjwooiqZMRPlFvlaTtfx$Wz04+PMOzpHhlDP5U5PpO8xTZxyGc/ZHowdz8ILnAGs=",
-    "last_login": "2023-07-10T18:03:40.244Z",
-    "username": "marat",
-    "bio": "I am a first user!",
-    "email": "m@m.com",
-    "normalized_email": "m@m.com",
-    "image": "avatars/user_3/back-to-the-future.format.jpeg",
-    "date_joined": "2023-07-10T18:03:17.615Z",
-    "is_active": true,
-    "is_staff": true,
-    "is_superuser": false,
-    "groups": [],
-    "user_permissions": [
-      37,
-      38,
-      39,
-      40,
-      33,
-      34,
-      35,
-      36,
-      30,
-      32
-    ]
-  }
-},
-{
   "model": "persons.person",
   "pk": 1,
   "fields": {
@@ -453,9 +416,9 @@
       8
     ],
     "genres": [
+      17,
       4,
-      13,
-      17
+      13
     ]
   }
 },
@@ -474,8 +437,8 @@
     ],
     "genres": [
       1,
-      5,
-      13
+      13,
+      5
     ]
   }
 },
@@ -518,24 +481,6 @@
       2,
       12,
       13
-    ]
-  }
-},
-{
-  "model": "persons.person",
-  "pk": 5,
-  "fields": {
-    "name": "Qqweqwe",
-    "surname": "qwe",
-    "height": 124,
-    "date_of_birth": "2023-07-22",
-    "place_of_birth": "awe",
-    "image": "images/default_avatar.png",
-    "career": [
-      1
-    ],
-    "genres": [
-      3
     ]
   }
 },
@@ -601,54 +546,6 @@
   "fields": {
     "name": "актер",
     "formatted_name": "актер"
-  }
-},
-{
-  "model": "rating.rating",
-  "pk": 1,
-  "fields": {
-    "movie": 4,
-    "user": 1,
-    "story": 10,
-    "acting": 10,
-    "music": 7,
-    "visual": 6,
-    "final": 8,
-    "total_rating": 8,
-    "comment": "norm",
-    "created_at": "2023-07-13T12:58:41.489Z"
-  }
-},
-{
-  "model": "rating.rating",
-  "pk": 2,
-  "fields": {
-    "movie": 6,
-    "user": 1,
-    "story": 10,
-    "acting": 10,
-    "music": 10,
-    "visual": 10,
-    "final": 10,
-    "total_rating": 10,
-    "comment": "super",
-    "created_at": "2023-07-13T13:17:21.977Z"
-  }
-},
-{
-  "model": "rating.rating",
-  "pk": 6,
-  "fields": {
-    "movie": 1,
-    "user": 1,
-    "story": 5,
-    "acting": 10,
-    "music": 7,
-    "visual": 10,
-    "final": 7,
-    "total_rating": 7,
-    "comment": "norm",
-    "created_at": "2023-07-21T13:31:35.851Z"
   }
 }
 ]
