@@ -1,1 +1,22 @@
 {% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Done{% endblock %}
+
+{% block head %}
+<link href="{% static 'css/activation_done.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/tick_animation.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+{% include "includes/tick.html" %}
+<div class="info">
+    <h2 id="text">
+        The account has been successfully activated.
+    </h2>
+    <a id="link" href="/">
+        Home
+    </a>
+</div>
+{% endblock %}

@@ -1,1 +1,24 @@
 {% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Done{% endblock %}
+
+{% block head %}
+<link href="{% static 'css/password_reset_and_signup_done.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+{% include "includes/alert.html" %}
+<div class="info">
+    <h2 id="main_text">
+        Registration was successful.
+    </h2>
+    <p id="info_text">
+        An email with a link has been sent to your email. Follow the link to confirm your account.
+    </p>
+    <a id="link" href="/">
+        Home
+    </a>
+</div>
+{% endblock %}

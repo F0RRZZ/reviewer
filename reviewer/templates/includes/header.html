@@ -21,7 +21,7 @@
             <a class="btn btn-primary me-2" href="{% url 'users:profile' user.username %}">Profile</a>
             <a class="btn btn-outline-primary me-2" href="{% url 'users:logout' %}">Logout</a>
             {% else %}
-            <a class="btn btn-outline-primary me-2" href="{% url 'users:login' %}">Sign In</a>
+            <a class="btn btn-outline-primary me-2" href="{% url 'users:login' %}">Login</a>
             <a class="btn btn-primary me-2" href="{% url 'users:signup' %}">Sign Up</a>
             {% endif %}
 

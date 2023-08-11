@@ -1,0 +1,12 @@
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+#text, #link {
+  text-align: center;
+}
+
+#link {
+  margin-top: 20px;
+}
