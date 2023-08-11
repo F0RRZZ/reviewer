@@ -30,6 +30,9 @@ class ProfileForm(core.mixins.BootstrapFormMixin, django.forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields[users.models.User.bio.field.name].required = False
+        self.fields[users.models.User.email.field.name].widget.attrs[
+            'readonly'
+        ] = True
 
     class Meta:
         model = users.models.User

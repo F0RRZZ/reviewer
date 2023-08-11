@@ -50,9 +50,7 @@ class ProfileView(django.views.generic.UpdateView):
 
     def get_paginator(self):
         user = self.get_object()
-        reviews = rating.models.Rating.objects.prefetch_related(
-            rating.models.Rating.movie.field.name
-        ).filter(user_id=user.id)
+        reviews = rating.models.Rating.objects.get_review_by_user_id(user.id)
         paginator = django.core.paginator.Paginator(
             reviews,
             self.paginate_by,
@@ -89,6 +87,16 @@ class SignUpView(django.views.generic.CreateView):
     )
     template_name = 'users/signup.html'
 
+    def send_email(self, user: users.models.User, absolute_uri: str):
+        try:
+            users.tasks.send_email.delay(
+                user.username, user.email, absolute_uri
+            )
+        except smtplib.SMTPAuthenticationError:
+            user.is_active = True
+            user.save()
+            return django.shortcuts.redirect('/')
+
     def form_valid(self, form):
         user = form.save(commit=False)
         if not django.conf.settings.USERS_AUTOACTIVATE:
@@ -97,14 +105,7 @@ class SignUpView(django.views.generic.CreateView):
                     'users:activation', args=[user.username]
                 )
             )
-            try:
-                users.tasks.send_email.delay(
-                    user.username, user.email, absolute_uri
-                )
-            except smtplib.SMTPAuthenticationError:
-                user.is_active = True
-                user.save()
-                return django.shortcuts.redirect('/')
+            self.send_email(user, absolute_uri)
         else:
             user.is_active = True
             user.save()

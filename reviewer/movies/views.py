@@ -61,34 +61,26 @@ class MovieDetailView(django.views.generic.DetailView):
         return paginator, page_obj
 
     def get_context_data(self, **kwargs):
+        fields = [
+            rating.models.Rating.story.field.name,
+            rating.models.Rating.acting.field.name,
+            rating.models.Rating.music.field.name,
+            rating.models.Rating.visual.field.name,
+            rating.models.Rating.final.field.name,
+        ]
         context = super().get_context_data(**kwargs)
         movie = self.object
         review = self.get_review()
         context['movie'] = movie
         context['review_exists'] = review is not None
         context['paginator'], context['page_obj'] = self.get_paginator()
-        context['avg_total_rating'] = rating.models.Rating.objects.get_avg(
-            movie.id, rating.models.Rating.total_rating.field.name
-        )
-        context['avg_story_rating'] = rating.models.Rating.objects.get_avg(
-            movie.id, rating.models.Rating.story.field.name
-        )
-        context['avg_acting_rating'] = rating.models.Rating.objects.get_avg(
-            movie.id,
-            rating.models.Rating.acting.field.name,
-        )
-        context['avg_music_rating'] = rating.models.Rating.objects.get_avg(
-            movie.id,
-            rating.models.Rating.music.field.name,
-        )
-        context['avg_visual_rating'] = rating.models.Rating.objects.get_avg(
-            movie.id,
-            rating.models.Rating.visual.field.name,
-        )
-        context['avg_final_rating'] = rating.models.Rating.objects.get_avg(
-            movie.id,
-            rating.models.Rating.final.field.name,
-        )
+        for field in fields:
+            context[
+                f'avg_{field}_rating'
+            ] = rating.models.Rating.objects.get_avg(
+                movie.id,
+                field,
+            )
         context['form'] = rating.forms.RatingForm(
             initial=self.get_review_form_initial_data(review=review)
         )
