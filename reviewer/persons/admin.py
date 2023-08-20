@@ -1,26 +1,26 @@
-import django.contrib.admin
+from django.contrib.admin import ModelAdmin, register
 
-import persons.models
+from persons.models import Person
 
 
-@django.contrib.admin.register(persons.models.Person)
-class PersonAdmin(django.contrib.admin.ModelAdmin):
+@register(Person)
+class PersonAdmin(ModelAdmin):
     list_display = (
-        persons.models.Person.name.field.name,
-        persons.models.Person.surname.field.name,
-        persons.models.Person.image_tmb,
+        Person.name.field.name,
+        Person.surname.field.name,
+        Person.image_tmb,
     )
     fields = (
-        persons.models.Person.name.field.name,
-        persons.models.Person.surname.field.name,
-        persons.models.Person.height.field.name,
-        persons.models.Person.place_of_birth.field.name,
-        persons.models.Person.date_of_birth.field.name,
-        persons.models.Person.image.field.name,
-        persons.models.Person.career.field.name,
-        persons.models.Person.genres.field.name,
+        Person.name.field.name,
+        Person.surname.field.name,
+        Person.height.field.name,
+        Person.place_of_birth.field.name,
+        Person.date_of_birth.field.name,
+        Person.image.field.name,
+        Person.career.field.name,
+        Person.genres.field.name,
     )
     filter_horizontal = (
-        persons.models.Person.career.field.name,
-        persons.models.Person.genres.field.name,
+        Person.career.field.name,
+        Person.genres.field.name,
     )

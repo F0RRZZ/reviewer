@@ -1,10 +1,10 @@
-import rest_framework.routers
+from rest_framework.routers import DefaultRouter
 
-import api.v1.roles.views
+from api.v1.roles.views import RoleViewSet
 
-router = rest_framework.routers.DefaultRouter()
+router = DefaultRouter()
 router.register(
     r'roles',
-    api.v1.roles.views.RoleViewSet,
+    RoleViewSet,
     basename='roles',
 )

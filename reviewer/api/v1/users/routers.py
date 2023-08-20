@@ -1,6 +1,6 @@
-import rest_framework.routers
+from rest_framework.routers import DefaultRouter
 
-import api.v1.users.views
+from api.v1.users.views import UserViewSet
 
-router = rest_framework.routers.DefaultRouter()
-router.register(r'users', api.v1.users.views.UserViewSet, basename='users')
+router = DefaultRouter()
+router.register(r'users', UserViewSet, basename='users')

@@ -1,10 +1,10 @@
-import rest_framework.routers
+from rest_framework.routers import DefaultRouter
 
-import api.v1.persons.views
+from api.v1.persons.views import PersonViewSet
 
-router = rest_framework.routers.DefaultRouter()
+router = DefaultRouter()
 router.register(
     r'persons',
-    api.v1.persons.views.PersonViewSet,
+    PersonViewSet,
     basename='persons',
 )

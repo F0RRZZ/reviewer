@@ -1,10 +1,10 @@
-import rest_framework.routers
+from rest_framework.routers import DefaultRouter
 
-import api.v1.movies.views
+from api.v1.movies.views import MovieViewSet
 
-router = rest_framework.routers.DefaultRouter()
+router = DefaultRouter()
 router.register(
     r'movies',
-    api.v1.movies.views.MovieViewSet,
+    MovieViewSet,
     basename='movies',
 )

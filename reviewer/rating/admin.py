@@ -1,15 +1,15 @@
-import django.contrib.admin
+from django.contrib.admin import ModelAdmin, register
 
-import rating.models
+from rating.models import Rating
 
 
-@django.contrib.admin.register(rating.models.Rating)
-class RatingAdmin(django.contrib.admin.ModelAdmin):
+@register(Rating)
+class RatingAdmin(ModelAdmin):
     list_display = (
-        rating.models.Rating.movie.field.name,
-        rating.models.Rating.total_rating.field.name,
+        Rating.movie.field.name,
+        Rating.total_rating.field.name,
     )
     readonly_fields = (
-        rating.models.Rating.total_rating.field.name,
-        rating.models.Rating.created_at.field.name,
+        Rating.total_rating.field.name,
+        Rating.created_at.field.name,
     )

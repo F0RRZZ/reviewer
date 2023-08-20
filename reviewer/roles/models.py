@@ -1,15 +1,15 @@
-import django.db.models
+from django.db.models import CharField
 
-import core.base_models
+from core.base_models import NameFormatterBaseModel
 
 
-class Role(core.base_models.NameFormatterBaseModel):
-    name = django.db.models.CharField(
+class Role(NameFormatterBaseModel):
+    name = CharField(
         'name',
         max_length=50,
         help_text='Maximum of 50 symbols',
     )
-    formatted_name = django.db.models.CharField(
+    formatted_name = CharField(
         'formatted_name',
         max_length=50,
     )

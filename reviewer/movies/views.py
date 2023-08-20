@@ -1,59 +1,62 @@
-import django.core.paginator
-import django.db.models
-import django.shortcuts
-import django.urls
-import django.views.generic
+from django.core.paginator import Paginator
+from django.db.models import Q
+from django.shortcuts import redirect
+from django.urls import reverse_lazy
+from django.views.generic import DetailView, ListView
 
-import core.mixins
-import core.movies.views
-import movies.models
-import persons.models
-import rating.forms
-import rating.models
+from core.mixins import SearchViewMixin
+from core.movies.views import (
+    BaseMovieStaffWithModifiedContextData,
+    BaseMovieStaffView,
+)
+from movies.models import Movie
+from persons.models import Person
+from rating.forms import RatingForm
+from rating.models import Rating
 
 
-class MovieDetailView(django.views.generic.DetailView):
+class MovieDetailView(DetailView):
     paginate_by = 20
     pk_url_kwarg = 'movie_id'
-    queryset = movies.models.Movie.objects.get_for_view_details()
+    queryset = Movie.objects.get_for_view_details()
     template_name = 'movies/movie_detail.html'
 
     def get_review(self):
         try:
-            review = rating.models.Rating.objects.get(
+            review = Rating.objects.get(
                 user_id=self.request.user.id,
                 movie_id=self.kwargs[self.pk_url_kwarg],
             )
             return review
-        except rating.models.Rating.DoesNotExist:
+        except Rating.DoesNotExist:
             return None
 
     def get_review_form_initial_data(self, review=None) -> dict:
         if not review:
-            review = rating.models.Rating(
+            review = Rating(
                 user_id=self.request.user.id,
                 movie_id=self.kwargs[self.pk_url_kwarg],
-                story=rating.models.Rating.ScoreData.DEFAULT,
-                acting=rating.models.Rating.ScoreData.DEFAULT,
-                music=rating.models.Rating.ScoreData.DEFAULT,
-                visual=rating.models.Rating.ScoreData.DEFAULT,
-                final=rating.models.Rating.ScoreData.DEFAULT,
+                story=Rating.ScoreData.DEFAULT,
+                acting=Rating.ScoreData.DEFAULT,
+                music=Rating.ScoreData.DEFAULT,
+                visual=Rating.ScoreData.DEFAULT,
+                final=Rating.ScoreData.DEFAULT,
             )
         initial = {
-            rating.models.Rating.story.field.name: review.story,
-            rating.models.Rating.acting.field.name: review.acting,
-            rating.models.Rating.music.field.name: review.music,
-            rating.models.Rating.visual.field.name: review.visual,
-            rating.models.Rating.final.field.name: review.final,
-            rating.models.Rating.comment.field.name: review.comment,
+            Rating.story.field.name: review.story,
+            Rating.acting.field.name: review.acting,
+            Rating.music.field.name: review.music,
+            Rating.visual.field.name: review.visual,
+            Rating.final.field.name: review.final,
+            Rating.comment.field.name: review.comment,
         }
         return initial
 
     def get_paginator(self):
-        reviews = rating.models.Rating.objects.select_related(
-            rating.models.Rating.user.field.name
-        ).filter(movie_id=self.kwargs[self.pk_url_kwarg])
-        paginator = django.core.paginator.Paginator(
+        reviews = Rating.objects.select_related(Rating.user.field.name).filter(
+            movie_id=self.kwargs[self.pk_url_kwarg]
+        )
+        paginator = Paginator(
             reviews,
             self.paginate_by,
         )
@@ -62,11 +65,11 @@ class MovieDetailView(django.views.generic.DetailView):
 
     def get_context_data(self, **kwargs):
         fields = [
-            rating.models.Rating.story.field.name,
-            rating.models.Rating.acting.field.name,
-            rating.models.Rating.music.field.name,
-            rating.models.Rating.visual.field.name,
-            rating.models.Rating.final.field.name,
+            Rating.story.field.name,
+            Rating.acting.field.name,
+            Rating.music.field.name,
+            Rating.visual.field.name,
+            Rating.final.field.name,
         ]
         context = super().get_context_data(**kwargs)
         movie = self.object
@@ -75,24 +78,22 @@ class MovieDetailView(django.views.generic.DetailView):
         context['review_exists'] = review is not None
         context['paginator'], context['page_obj'] = self.get_paginator()
         for field in fields:
-            context[
-                f'avg_{field}_rating'
-            ] = rating.models.Rating.objects.get_avg(
+            context[f'avg_{field}_rating'] = Rating.objects.get_avg(
                 movie.id,
                 field,
             )
-        context['form'] = rating.forms.RatingForm(
+        context['form'] = RatingForm(
             initial=self.get_review_form_initial_data(review=review)
         )
         return context
 
     def post(self, request, movie_id):
-        existing_review = rating.models.Rating.objects.filter(
+        existing_review = Rating.objects.filter(
             user_id=request.user.id,
             movie_id=self.kwargs[self.pk_url_kwarg],
         ).first()
 
-        review_form = rating.forms.RatingForm(
+        review_form = RatingForm(
             request.POST or None, instance=existing_review
         )
         if review_form.is_valid():
@@ -101,14 +102,14 @@ class MovieDetailView(django.views.generic.DetailView):
             review.movie_id = movie_id
             review.save()
 
-        return django.shortcuts.redirect(
-            django.urls.reverse_lazy('movies:movie_detail', kwargs=self.kwargs)
+        return redirect(
+            reverse_lazy('movies:movie_detail', kwargs=self.kwargs)
         )
 
 
-class MoviesByGenreView(django.views.generic.ListView):
+class MoviesByGenreView(ListView):
     context_object_name = 'movies'
-    model = movies.models.Movie
+    model = Movie
     paginate_by = 12
     template_name = 'movies/movies_by_genre.html'
 
@@ -124,121 +125,79 @@ class MoviesByGenreView(django.views.generic.ListView):
         return context
 
 
-class MovieActorsView(core.movies.views.BaseMovieStaffWithModifiedContextData):
+class MovieActorsView(BaseMovieStaffWithModifiedContextData):
     staff_type = 'actors'
 
     def get_queryset(self):
-        movie = movies.models.Movie.objects.filter(
-            pk=self.kwargs[self.pk_url_kwarg]
-        ).first()
-        actors = persons.models.Person.objects.filter(actors__in=[movie.id])
+        movie = Movie.objects.filter(pk=self.kwargs[self.pk_url_kwarg]).first()
+        actors = Person.objects.filter(actors__in=[movie.id])
         return actors
 
 
-class MovieDirectorsView(
-    core.movies.views.BaseMovieStaffWithModifiedContextData
-):
+class MovieDirectorsView(BaseMovieStaffWithModifiedContextData):
     staff_type = 'directors'
 
     def get_queryset(self):
-        movie = movies.models.Movie.objects.filter(
-            pk=self.kwargs[self.pk_url_kwarg]
-        ).first()
-        directors = persons.models.Person.objects.filter(
-            director__in=[movie.id]
-        )
+        movie = Movie.objects.filter(pk=self.kwargs[self.pk_url_kwarg]).first()
+        directors = Person.objects.filter(director__in=[movie.id])
         return directors
 
 
-class MovieProducersView(
-    core.movies.views.BaseMovieStaffWithModifiedContextData
-):
+class MovieProducersView(BaseMovieStaffWithModifiedContextData):
     staff_type = 'producers'
 
     def get_queryset(self):
-        movie = movies.models.Movie.objects.filter(
-            pk=self.kwargs[self.pk_url_kwarg]
-        ).first()
-        producers = persons.models.Person.objects.filter(
-            producer__in=[movie.id]
-        )
+        movie = Movie.objects.filter(pk=self.kwargs[self.pk_url_kwarg]).first()
+        producers = Person.objects.filter(producer__in=[movie.id])
         return producers
 
 
-class MovieScreenwritersView(
-    core.movies.views.BaseMovieStaffWithModifiedContextData
-):
+class MovieScreenwritersView(BaseMovieStaffWithModifiedContextData):
     staff_type = 'screenwriters'
 
     def get_queryset(self):
-        movie = movies.models.Movie.objects.filter(
-            pk=self.kwargs[self.pk_url_kwarg]
-        ).first()
-        screenwriters = persons.models.Person.objects.filter(
-            screenwriter__in=[movie.id]
-        )
+        movie = Movie.objects.filter(pk=self.kwargs[self.pk_url_kwarg]).first()
+        screenwriters = Person.objects.filter(screenwriter__in=[movie.id])
         return screenwriters
 
 
-class MovieOperatorsView(
-    core.movies.views.BaseMovieStaffWithModifiedContextData
-):
+class MovieOperatorsView(BaseMovieStaffWithModifiedContextData):
     staff_type = 'operators'
 
     def get_queryset(self):
-        movie = movies.models.Movie.objects.filter(
-            pk=self.kwargs[self.pk_url_kwarg]
-        ).first()
-        operators = persons.models.Person.objects.filter(
-            operator__in=[movie.id]
-        )
+        movie = Movie.objects.filter(pk=self.kwargs[self.pk_url_kwarg]).first()
+        operators = Person.objects.filter(operator__in=[movie.id])
         return operators
 
 
-class MovieComposersView(
-    core.movies.views.BaseMovieStaffWithModifiedContextData
-):
+class MovieComposersView(BaseMovieStaffWithModifiedContextData):
     staff_type = 'composers'
 
     def get_queryset(self):
-        movie = movies.models.Movie.objects.filter(
-            pk=self.kwargs[self.pk_url_kwarg]
-        ).first()
-        composers = persons.models.Person.objects.filter(
-            composer__in=[movie.id]
-        )
+        movie = Movie.objects.filter(pk=self.kwargs[self.pk_url_kwarg]).first()
+        composers = Person.objects.filter(composer__in=[movie.id])
         return composers
 
 
-class MovieArtistsView(
-    core.movies.views.BaseMovieStaffWithModifiedContextData
-):
+class MovieArtistsView(BaseMovieStaffWithModifiedContextData):
     staff_type = 'artists'
 
     def get_queryset(self):
-        movie = movies.models.Movie.objects.filter(
-            pk=self.kwargs[self.pk_url_kwarg]
-        ).first()
-        artists = persons.models.Person.objects.filter(artist__in=[movie.id])
+        movie = Movie.objects.filter(pk=self.kwargs[self.pk_url_kwarg]).first()
+        artists = Person.objects.filter(artist__in=[movie.id])
         return artists
 
 
-class MovieEditorsView(
-    core.movies.views.BaseMovieStaffWithModifiedContextData
-):
+class MovieEditorsView(BaseMovieStaffWithModifiedContextData):
     staff_type = 'editors'
 
     def get_queryset(self):
-        movie = movies.models.Movie.objects.filter(
-            pk=self.kwargs[self.pk_url_kwarg]
-        ).first()
-        editors = persons.models.Person.objects.filter(montage__in=[movie.id])
+        movie = Movie.objects.filter(pk=self.kwargs[self.pk_url_kwarg]).first()
+        editors = Person.objects.filter(montage__in=[movie.id])
         return editors
 
 
-class SearchView(
-    core.movies.views.BaseMovieStaffView, core.mixins.SearchViewMixin
-):
+class SearchView(BaseMovieStaffView, SearchViewMixin):
     def get_queryset(self):
         staff_type = self.kwargs['staff_type']
         queryset = None
@@ -259,8 +218,8 @@ class SearchView(
         if staff_type == 'editors':
             queryset = MovieEditorsView.get_queryset(self)
         return queryset.filter(
-            django.db.models.Q(name__icontains=self.request.GET.get('q'))
-            | django.db.models.Q(surname__icontains=self.request.GET.get('q'))
+            Q(name__icontains=self.request.GET.get('q'))
+            | Q(surname__icontains=self.request.GET.get('q'))
         )
 
     def get_context_data(self, **kwargs):

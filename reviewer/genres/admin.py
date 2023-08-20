@@ -1,8 +1,8 @@
-import django.contrib.admin
+from django.contrib.admin import ModelAdmin, register
 
-import genres.models
+from genres.models import Genre
 
 
-@django.contrib.admin.register(genres.models.Genre)
-class GenreAdmin(django.contrib.admin.ModelAdmin):
-    exclude = (genres.models.Genre.formatted_name.field.name,)
+@register(Genre)
+class GenreAdmin(ModelAdmin):
+    exclude = (Genre.formatted_name.field.name,)

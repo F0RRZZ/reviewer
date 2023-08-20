@@ -1,11 +1,11 @@
-import rest_framework.viewsets
+from rest_framework.viewsets import ModelViewSet
 
-import api.v1.genres.serializers
-import core.api.permissions
-import genres.models
+from api.v1.genres.serializers import GenreSerializer
+from core.api.permissions import IsAdminOrReadOnly
+from genres.models import Genre
 
 
-class GenreViewSet(rest_framework.viewsets.ModelViewSet):
-    queryset = genres.models.Genre.objects.all()
-    serializer_class = api.v1.genres.serializers.GenreSerializer
-    permission_classes = (core.api.permissions.IsAdminOrReadOnly,)
+class GenreViewSet(ModelViewSet):
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer
+    permission_classes = (IsAdminOrReadOnly,)

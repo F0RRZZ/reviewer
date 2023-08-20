@@ -1,7 +1,7 @@
-import django.views.generic
+from django.views.generic import ListView
 
 
-class FeedBaseView(django.views.generic.ListView):
+class FeedBaseView(ListView):
     context_object_name = 'movies'
     paginate_by = 12
     template_name = 'feeds/feed.html'

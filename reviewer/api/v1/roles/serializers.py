@@ -1,12 +1,12 @@
-import rest_framework.serializers
+from rest_framework.serializers import ModelSerializer
 
-import roles.models
+from roles.models import Role
 
 
-class RoleSerializer(rest_framework.serializers.ModelSerializer):
+class RoleSerializer(ModelSerializer):
     class Meta:
-        model = roles.models.Role
+        model = Role
         fields = (
             'id',
-            roles.models.Role.name.field.name,
+            Role.name.field.name,
         )

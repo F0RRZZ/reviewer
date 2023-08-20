@@ -1,11 +1,10 @@
-import django.contrib.auth.models
-import django.db.models
-import django.shortcuts
+from django.contrib.auth.models import BaseUserManager
+from django.shortcuts import get_object_or_404
 
 import users.models
 
 
-class UserManager(django.contrib.auth.models.BaseUserManager):
+class UserManager(BaseUserManager):
     def get_by_natural_key(self, value):
         if '@' in value:
             return self.get(email__iexact=value)
@@ -29,7 +28,7 @@ class UserManager(django.contrib.auth.models.BaseUserManager):
         return self.create_user(username, email, password, **extra_fields)
 
     def get_with_only_username(self, pk):
-        return django.shortcuts.get_object_or_404(
+        return get_object_or_404(
             self.filter(
                 is_active=True,
             ).only(users.models.User.username.field.name),

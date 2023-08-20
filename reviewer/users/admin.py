@@ -1,11 +1,11 @@
-import django.contrib.admin
+from django.contrib.admin import ModelAdmin, register
 
-import users.models
+from users.models import User
 
 
-@django.contrib.admin.register(users.models.User)
-class UserAdmin(django.contrib.admin.ModelAdmin):
+@register(User)
+class UserAdmin(ModelAdmin):
     exclude = (
-        users.models.User.password.field.name,
-        users.models.User.normalized_email.field.name,
+        User.password.field.name,
+        User.normalized_email.field.name,
     )

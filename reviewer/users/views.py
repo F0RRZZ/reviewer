@@ -1,57 +1,47 @@
-import smtplib
+from smtplib import SMTPAuthenticationError
 
-import django.conf
-import django.core.mail
-import django.core.paginator
-import django.http
-import django.shortcuts
-import django.urls
-import django.utils.timezone
-import django.views
-import django.views.generic
+from django.conf import settings
+from django.core.paginator import Paginator
+from django.http import Http404
+from django.shortcuts import get_object_or_404, redirect
+from django.urls import reverse_lazy
+from django.utils import timezone
+from django.views import View
+from django.views import generic
 
-import core.mixins
-import rating.models
-import users.forms
-import users.models
-import users.tasks
+from core.mixins import SearchViewMixin
+from rating.models import Rating
+from users.forms import ProfileForm, SignUpForm
+from users.models import User
+from users.tasks import send_email
 
 
-class AccountActivationView(django.views.View):
+class AccountActivationView(View):
     def get(self, request, *args, **kwargs):
-        user = django.shortcuts.get_object_or_404(
-            users.models.User, username=self.kwargs['username']
-        )
-        if (
-            django.utils.timezone.now() - user.date_joined
-            > django.utils.timezone.timedelta(weeks=1)
-        ):
-            raise django.http.Http404
+        user = get_object_or_404(User, username=self.kwargs['username'])
+        if timezone.now() - user.date_joined > timezone.timedelta(weeks=1):
+            raise Http404
         user.is_active = True
         user.save()
 
-        return django.shortcuts.redirect(
-            django.urls.reverse_lazy('users:activation_done')
-        )
+        return redirect(reverse_lazy('users:activation_done'))
 
 
-class AccountActivationDoneView(
-    django.views.generic.TemplateView,
-):
+class AccountActivationDoneView(generic.TemplateView):
     template_name = 'users/activation_done.html'
 
 
-class ProfileView(django.views.generic.UpdateView):
+class ProfileView(generic.UpdateView):
     context_object_name = 'profile_owner'
-    form_class = users.forms.ProfileForm
+    form_class = ProfileForm
     paginate_by = 10
     pk_url_kwarg = 'username'
     template_name = 'users/profile.html'
 
     def get_paginator(self):
         user = self.get_object()
-        reviews = rating.models.Rating.objects.get_review_by_user_id(user.id)
-        paginator = django.core.paginator.Paginator(
+        reviews = Rating.objects.get_review_by_user_id(user.id)
+        paginator = Paginator(
             reviews,
             self.paginate_by,
         )
@@ -59,13 +49,13 @@ class ProfileView(django.views.generic.UpdateView):
         return paginator, page_obj
 
     def get_object(self):
-        return django.shortcuts.get_object_or_404(
-            users.models.User.objects.get_user_profile(),
+        return get_object_or_404(
+            User.objects.get_user_profile(),
             username=self.kwargs.get(self.pk_url_kwarg),
         )
 
     def get_success_url(self) -> str:
-        return django.urls.reverse_lazy(
+        return reverse_lazy(
             'users:profile',
             kwargs={
                 self.pk_url_kwarg: self.object.username,
@@ -78,32 +68,28 @@ class ProfileView(django.views.generic.UpdateView):
         return context
 
 
-class SignUpView(django.views.generic.CreateView):
-    form_class = users.forms.SignUpForm
+class SignUpView(generic.CreateView):
+    form_class = SignUpForm
     success_url = (
         '/'
-        if django.conf.settings.USERS_AUTOACTIVATE
-        else django.urls.reverse_lazy('users:signup_done')
+        if settings.USERS_AUTOACTIVATE
+        else reverse_lazy('users:signup_done')
     )
     template_name = 'users/signup.html'
 
-    def send_email(self, user: users.models.User, absolute_uri: str):
+    def send_email(self, user: User, absolute_uri: str):
         try:
-            users.tasks.send_email.delay(
-                user.username, user.email, absolute_uri
-            )
-        except smtplib.SMTPAuthenticationError:
+            send_email.delay(user.username, user.email, absolute_uri)
+        except SMTPAuthenticationError:
             user.is_active = True
             user.save()
-            return django.shortcuts.redirect('/')
+            return redirect('/')
 
     def form_valid(self, form):
         user = form.save(commit=False)
-        if not django.conf.settings.USERS_AUTOACTIVATE:
+        if not settings.USERS_AUTOACTIVATE:
             absolute_uri = self.request.build_absolute_uri(
-                django.urls.reverse_lazy(
-                    'users:activation', args=[user.username]
-                )
+                reverse_lazy('users:activation', args=[user.username])
             )
             self.send_email(user, absolute_uri)
         else:
@@ -112,28 +98,23 @@ class SignUpView(django.views.generic.CreateView):
         return super().form_valid(form)
 
 
-class SignUpDoneView(
-    django.views.generic.TemplateView,
-):
+class SignUpDoneView(generic.TemplateView):
     template_name = 'users/signup_done.html'
 
 
-class UserListView(django.views.generic.ListView):
+class UserListView(generic.ListView):
     context_object_name = 'users'
     paginate_by = 30
-    queryset = users.models.User.objects.all().order_by(
-        users.models.User.username.field.name,
+    queryset = User.objects.all().order_by(
+        User.username.field.name,
     )
 
 
-class SearchView(
-    django.views.generic.ListView,
-    core.mixins.SearchViewMixin,
-):
+class SearchView(generic.ListView, SearchViewMixin):
     context_object_name = 'users'
     paginate_by = 30
 
     def get_queryset(self):
-        return users.models.User.objects.filter(
+        return User.objects.filter(
             username__icontains=self.request.GET.get('q')
         )

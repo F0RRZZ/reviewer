@@ -1,44 +1,42 @@
-import django.contrib.auth.forms
-import django.forms
+from django.contrib.auth.forms import UserCreationForm
+from django import forms
 
-import core.mixins
-import users.models
+from core.mixins import BootstrapFormMixin
+from users.models import User
 
 
 class SignUpForm(
-    core.mixins.BootstrapFormMixin,
-    django.contrib.auth.forms.UserCreationForm,
+    BootstrapFormMixin,
+    UserCreationForm,
 ):
     class Meta:
-        model = users.models.User
+        model = User
         fields = (
-            users.models.User.username.field.name,
-            users.models.User.email.field.name,
+            User.username.field.name,
+            User.email.field.name,
             'password1',
             'password2',
         )
 
 
-class ProfileForm(core.mixins.BootstrapFormMixin, django.forms.ModelForm):
-    image = django.forms.ImageField(
+class ProfileForm(BootstrapFormMixin, forms.ModelForm):
+    image = forms.ImageField(
         label='Avatar',
         required=False,
         error_messages={'invalid': 'Image files only'},
-        widget=django.forms.FileInput,
+        widget=forms.FileInput,
     )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields[users.models.User.bio.field.name].required = False
-        self.fields[users.models.User.email.field.name].widget.attrs[
-            'readonly'
-        ] = True
+        self.fields[User.bio.field.name].required = False
+        self.fields[User.email.field.name].widget.attrs['readonly'] = True
 
     class Meta:
-        model = users.models.User
+        model = User
         fields = (
-            users.models.User.image.field.name,
-            users.models.User.username.field.name,
-            users.models.User.email.field.name,
-            users.models.User.bio.field.name,
+            User.image.field.name,
+            User.username.field.name,
+            User.email.field.name,
+            User.bio.field.name,
         )

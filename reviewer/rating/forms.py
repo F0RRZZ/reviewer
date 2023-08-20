@@ -1,81 +1,81 @@
-import django.forms
+from django import forms
 
-import core.mixins
-import rating.models
+from core.mixins import BootstrapFormMixin
+from rating.models import Rating
 
 
-class RatingForm(core.mixins.BootstrapFormMixin, django.forms.ModelForm):
+class RatingForm(BootstrapFormMixin, forms.ModelForm):
     class Meta:
-        model = rating.models.Rating
+        model = Rating
         fields = [
-            rating.models.Rating.story.field.name,
-            rating.models.Rating.acting.field.name,
-            rating.models.Rating.music.field.name,
-            rating.models.Rating.visual.field.name,
-            rating.models.Rating.final.field.name,
-            rating.models.Rating.comment.field.name,
+            Rating.story.field.name,
+            Rating.acting.field.name,
+            Rating.music.field.name,
+            Rating.visual.field.name,
+            Rating.final.field.name,
+            Rating.comment.field.name,
         ]
         labels = {
-            rating.models.Rating.story.field.name: 'Story',
-            rating.models.Rating.acting.field.name: 'Acting',
-            rating.models.Rating.music.field.name: 'Music',
-            rating.models.Rating.visual.field.name: 'Visual',
-            rating.models.Rating.final.field.name: 'Final',
-            rating.models.Rating.comment.field.name: 'Comment',
+            Rating.story.field.name: 'Story',
+            Rating.acting.field.name: 'Acting',
+            Rating.music.field.name: 'Music',
+            Rating.visual.field.name: 'Visual',
+            Rating.final.field.name: 'Final',
+            Rating.comment.field.name: 'Comment',
         }
         widgets = {
-            rating.models.Rating.story.field.name: django.forms.TextInput(
+            Rating.story.field.name: forms.TextInput(
                 attrs={
                     'type': 'range',
                     'min': '1',
                     'max': '10',
                     'class': 'form-range',
                     'oninput': 'updateValue("{}")'.format(
-                        rating.models.Rating.story.field.name
+                        Rating.story.field.name
                     ),
                 }
             ),
-            rating.models.Rating.acting.field.name: django.forms.TextInput(
+            Rating.acting.field.name: forms.TextInput(
                 attrs={
                     'type': 'range',
                     'min': '1',
                     'max': '10',
                     'class': 'form-range',
                     'oninput': 'updateValue("{}")'.format(
-                        rating.models.Rating.acting.field.name
+                        Rating.acting.field.name
                     ),
                 }
             ),
-            rating.models.Rating.visual.field.name: django.forms.TextInput(
+            Rating.visual.field.name: forms.TextInput(
                 attrs={
                     'type': 'range',
                     'min': '1',
                     'max': '10',
                     'class': 'form-range',
                     'oninput': 'updateValue("{}")'.format(
-                        rating.models.Rating.visual.field.name
+                        Rating.visual.field.name
                     ),
                 }
             ),
-            rating.models.Rating.music.field.name: django.forms.TextInput(
+            Rating.music.field.name: forms.TextInput(
                 attrs={
                     'type': 'range',
                     'min': '1',
                     'max': '10',
                     'class': 'form-range',
                     'oninput': 'updateValue("{}")'.format(
-                        rating.models.Rating.music.field.name
+                        Rating.music.field.name
                     ),
                 }
             ),
-            rating.models.Rating.final.field.name: django.forms.TextInput(
+            Rating.final.field.name: forms.TextInput(
                 attrs={
                     'type': 'range',
                     'min': '1',
                     'max': '10',
                     'class': 'form-range',
                     'oninput': 'updateValue("{}")'.format(
-                        rating.models.Rating.final.field.name
+                        Rating.final.field.name
                     ),
                 }
             ),

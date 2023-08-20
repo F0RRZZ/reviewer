@@ -1,10 +1,10 @@
-import rest_framework.routers
+from rest_framework.routers import DefaultRouter
 
-import api.v1.genres.views
+from api.v1.genres.views import GenreViewSet
 
-router = rest_framework.routers.DefaultRouter()
+router = DefaultRouter()
 router.register(
     r'genres',
-    api.v1.genres.views.GenreViewSet,
+    GenreViewSet,
     basename='genres',
 )

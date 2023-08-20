@@ -1,55 +1,55 @@
-import django.core.validators
-import django.db.models
-import django.utils.timezone
+from django.core.validators import MaxValueValidator, MinValueValidator
+from django.db import models
+from django.utils import safestring, timezone
 
-import core.mixins
-import genres.models
-import roles.models
+from core.mixins import ImageMixin
+from genres.models import Genre
+from roles.models import Role
 
 
-class Person(core.mixins.ImageMixin, django.db.models.Model):
+class Person(ImageMixin, models.Model):
     DEFAULT_IMAGE = 'images/default_avatar.png'
-    name = django.db.models.CharField(
+    name = models.CharField(
         'name',
         max_length=50,
         help_text='Maximum of 50 symbols',
     )
-    surname = django.db.models.CharField(
+    surname = models.CharField(
         'surname', max_length=50, help_text='Maximum of 50 symbols'
     )
-    career = django.db.models.ManyToManyField(
-        roles.models.Role,
+    career = models.ManyToManyField(
+        Role,
     )
-    height = django.db.models.PositiveSmallIntegerField(
+    height = models.PositiveSmallIntegerField(
         'height',
         validators=[
-            django.core.validators.MinValueValidator(100),
-            django.core.validators.MaxValueValidator(250),
+            MinValueValidator(100),
+            MaxValueValidator(250),
         ],
         help_text='Min - 120, max - 250',
         null=True,
         blank=True,
     )
-    date_of_birth = django.db.models.DateField(
+    date_of_birth = models.DateField(
         'date_of_birth',
         null=True,
         blank=True,
     )
-    place_of_birth = django.db.models.CharField(
+    place_of_birth = models.CharField(
         'place_of_birth',
         max_length=200,
         help_text='Maximum of 200 symbols',
         null=True,
         blank=True,
     )
-    genres = django.db.models.ManyToManyField(
-        genres.models.Genre,
+    genres = models.ManyToManyField(
+        Genre,
     )
 
     def get_image_path(self, filename: str) -> str:
         return f'persons/person_{self.id}/{filename}'
 
-    image = django.db.models.ImageField(
+    image = models.ImageField(
         'image',
         upload_to=get_image_path,
         default=DEFAULT_IMAGE,
@@ -58,7 +58,7 @@ class Person(core.mixins.ImageMixin, django.db.models.Model):
     def image_tmb(self):
         if self.image:
             image_url = self.image.url
-            return django.utils.safestring.mark_safe(
+            return safestring.mark_safe(
                 f'<img src="{image_url}" width="50" height="50"/>'
             )
         return 'no_photo'
@@ -72,5 +72,5 @@ class Person(core.mixins.ImageMixin, django.db.models.Model):
 
     def save(self, *args, **kwargs):
         if self.date_of_birth is None:
-            self.date_of_birth = django.utils.timezone.now()
+            self.date_of_birth = timezone.now()
         super(Person, self).save(*args, **kwargs)

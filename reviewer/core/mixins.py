@@ -1,4 +1,4 @@
-import sorl.thumbnail
+from sorl.thumbnail import get_thumbnail
 
 
 class ImageMixin:
@@ -12,13 +12,13 @@ class ImageMixin:
 
     def get_sized_image(self, size: str):
         if self.image:
-            return sorl.thumbnail.get_thumbnail(
+            return get_thumbnail(
                 self.image,
                 size,
                 crop='center',
                 quality=99,
             )
-        return sorl.thumbnail.get_thumbnail(
+        return get_thumbnail(
             self.DEFAULT_IMAGE,
             size,
             crop='center',

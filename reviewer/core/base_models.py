@@ -1,21 +1,21 @@
-import django.core.validators
-import django.db.models
+from django.core.validators import ValidationError
+from django.db.models import Model
 
-import core.tools
+from core.tools import name_formatter
 
 
-class NameFormatterBaseModel(django.db.models.Model):
+class NameFormatterBaseModel(Model):
     class Meta:
         abstract = True
 
     def save(self, *args, **kwargs):
-        self.formatted_name = core.tools.name_formatter(self.name)
+        self.formatted_name = name_formatter(self.name)
         super().save(*args, **kwargs)
 
     def clean(self):
-        formatted_name = core.tools.name_formatter(self.name)
+        formatted_name = name_formatter(self.name)
         if self.__class__.objects.filter(
             formatted_name=formatted_name
         ).exists():
-            raise django.core.validators.ValidationError('Name must be unique')
+            raise ValidationError('Name must be unique')
         return self.name

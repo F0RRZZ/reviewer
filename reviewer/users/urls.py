@@ -1,97 +1,95 @@
-import django.contrib.auth.views
-import django.urls
+from django.contrib.auth import views as auth_views
+from django.urls import path
 
-import users.views
+from users import views
 
 app_name = 'users'
 urlpatterns = [
-    django.urls.path(
+    path(
         'login/',
-        django.contrib.auth.views.LoginView.as_view(
-            template_name='users/login.html'
-        ),
+        auth_views.LoginView.as_view(template_name='users/login.html'),
         name='login',
     ),
-    django.urls.path(
+    path(
         'logout/',
-        django.contrib.auth.views.LogoutView.as_view(),
+        auth_views.LogoutView.as_view(),
         name='logout',
     ),
-    django.urls.path(
+    path(
         'password_change/',
-        django.contrib.auth.views.PasswordChangeView.as_view(
+        auth_views.PasswordChangeView.as_view(
             template_name='users/change_password.html'
         ),
         name='change_password',
     ),
-    django.urls.path(
+    path(
         'password_change/done/',
-        django.contrib.auth.views.PasswordChangeDoneView.as_view(
+        auth_views.PasswordChangeDoneView.as_view(
             template_name='users/change_password_done.html',
         ),
         name='change_password_done',
     ),
-    django.urls.path(
+    path(
         'password_reset/',
-        django.contrib.auth.views.PasswordResetView.as_view(
+        auth_views.PasswordResetView.as_view(
             template_name='users/reset_password.html',
         ),
         name='reset_password',
     ),
-    django.urls.path(
+    path(
         'password_reset/done/',
-        django.contrib.auth.views.PasswordResetDoneView.as_view(
+        auth_views.PasswordResetDoneView.as_view(
             template_name='users/reset_password_done.html',
         ),
         name='reset_password_done',
     ),
-    django.urls.path(
+    path(
         'reset/<uidb64>/<token>/',
-        django.contrib.auth.views.PasswordResetConfirmView.as_view(
+        auth_views.PasswordResetConfirmView.as_view(
             template_name='users/reset_password_confirm.html',
         ),
         name='reset_password_confirm',
     ),
-    django.urls.path(
+    path(
         'reset/done/',
-        django.contrib.auth.views.PasswordResetCompleteView.as_view(
+        auth_views.PasswordResetCompleteView.as_view(
             template_name='users/reset_password_complete.html',
         ),
         name='reset_password_complete',
     ),
-    django.urls.path(
+    path(
         'signup/',
-        users.views.SignUpView.as_view(),
+        views.SignUpView.as_view(),
         name='signup',
     ),
-    django.urls.path(
+    path(
         'signup/done/',
-        users.views.SignUpDoneView.as_view(),
+        views.SignUpDoneView.as_view(),
         name='signup_done',
     ),
-    django.urls.path(
+    path(
         'activation/done/',
-        users.views.AccountActivationDoneView.as_view(),
+        views.AccountActivationDoneView.as_view(),
         name='activation_done',
     ),
-    django.urls.path(
+    path(
         'activation/<str:username>/',
-        users.views.AccountActivationView.as_view(),
+        views.AccountActivationView.as_view(),
         name='activation',
     ),
-    django.urls.path(
+    path(
         'profile/<str:username>/',
-        users.views.ProfileView.as_view(),
+        views.ProfileView.as_view(),
         name='profile',
     ),
-    django.urls.path(
+    path(
         'list/',
-        users.views.UserListView.as_view(),
+        views.UserListView.as_view(),
         name='userlist',
     ),
-    django.urls.path(
+    path(
         'list/search/',
-        users.views.SearchView.as_view(),
+        views.SearchView.as_view(),
         name='search',
     ),
 ]

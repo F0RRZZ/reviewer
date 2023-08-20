@@ -1,27 +1,27 @@
-import rest_framework.serializers
+from rest_framework.serializers import ModelSerializer
 
-import rating.models
+from rating.models import Rating
 
 
 base_fields = [
-    rating.models.Rating.story.field.name,
-    rating.models.Rating.acting.field.name,
-    rating.models.Rating.music.field.name,
-    rating.models.Rating.visual.field.name,
-    rating.models.Rating.final.field.name,
-    rating.models.Rating.total_rating.field.name,
-    rating.models.Rating.comment.field.name,
-    rating.models.Rating.created_at.field.name,
+    Rating.story.field.name,
+    Rating.acting.field.name,
+    Rating.music.field.name,
+    Rating.visual.field.name,
+    Rating.final.field.name,
+    Rating.total_rating.field.name,
+    Rating.comment.field.name,
+    Rating.created_at.field.name,
 ]
 
 
-class ReviewSerializerForMovies(rest_framework.serializers.ModelSerializer):
+class ReviewSerializerForMovies(ModelSerializer):
     class Meta:
-        model = rating.models.Rating
-        fields = [rating.models.Rating.user.field.name] + base_fields
+        model = Rating
+        fields = [Rating.user.field.name] + base_fields
 
 
-class ReviewSerializerForUsers(rest_framework.serializers.ModelSerializer):
+class ReviewSerializerForUsers(ModelSerializer):
     class Meta:
-        model = rating.models.Rating
-        fields = [rating.models.Rating.movie.field.name] + base_fields
+        model = Rating
+        fields = [Rating.movie.field.name] + base_fields

@@ -1,17 +1,17 @@
-import django.db.models
-import django.db.models.fields
-import django.db.models.functions
+from django.db.models import Avg, Manager, Prefetch, Value
+from django.db.models.fields import FloatField
+from django.db.models.functions import Coalesce
 
-import genres.models
+from genres.models import Genre
 import movies.models
 
 
-class MovieManager(django.db.models.Manager):
+class MovieManager(Manager):
     def get_with_genres(self):
         return self.get_queryset().prefetch_related(
-            django.db.models.Prefetch(
+            Prefetch(
                 movies.models.Movie.genre.field.name,
-                queryset=genres.models.Genre.objects.only(
+                queryset=Genre.objects.only(
                     movies.models.Movie.name.field.name,
                 ),
             )
@@ -31,10 +31,10 @@ class MovieManager(django.db.models.Manager):
         return (
             self.get_with_genres()
             .annotate(
-                avg_rating=django.db.models.functions.Coalesce(
-                    django.db.models.Avg('movies_reviews__total_rating'),
-                    django.db.models.Value(0),
-                    output_field=django.db.models.fields.FloatField(),
+                avg_rating=Coalesce(
+                    Avg('movies_reviews__total_rating'),
+                    Value(0),
+                    output_field=FloatField(),
                 )
             )
             .order_by('-avg_rating')

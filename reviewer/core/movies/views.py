@@ -1,7 +1,7 @@
-import django.views.generic
+from django.views.generic import ListView
 
 
-class BaseMovieStaffView(django.views.generic.ListView):
+class BaseMovieStaffView(ListView):
     context_object_name = 'persons'
     paginate_by = 10
     pk_url_kwarg = 'movie_id'

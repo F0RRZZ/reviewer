@@ -1,12 +1,12 @@
-import django.urls
+from django.urls import path
 
-import persons.views
+from persons.views import PersonDetailView
 
 app_name = 'persons'
 urlpatterns = [
-    django.urls.path(
+    path(
         '<int:person_id>',
-        persons.views.PersonDetailView.as_view(),
+        PersonDetailView.as_view(),
         name='person_detail',
     )
 ]

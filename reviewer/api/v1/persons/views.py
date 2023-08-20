@@ -1,11 +1,11 @@
-import rest_framework.viewsets
+from rest_framework.viewsets import ModelViewSet
 
-import api.v1.persons.serializers
-import core.api.permissions
-import persons.models
+from api.v1.persons.serializers import PersonSerializer
+from core.api.permissions import IsAdminOrReadOnly
+from persons.models import Person
 
 
-class PersonViewSet(rest_framework.viewsets.ModelViewSet):
-    queryset = persons.models.Person.objects.all()
-    serializer_class = api.v1.persons.serializers.PersonSerializer
-    permission_classes = (core.api.permissions.IsAdminOrReadOnly,)
+class PersonViewSet(ModelViewSet):
+    queryset = Person.objects.all()
+    serializer_class = PersonSerializer
+    permission_classes = (IsAdminOrReadOnly,)

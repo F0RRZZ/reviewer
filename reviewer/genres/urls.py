@@ -1,17 +1,17 @@
-import django.urls
+from django.urls import path
 
-import genres.views
+from genres.views import GenreListView, SearchView
 
 app_name = 'genres'
 urlpatterns = [
-    django.urls.path(
+    path(
         '',
-        genres.views.GenreListView.as_view(),
+        GenreListView.as_view(),
         name='genres',
     ),
-    django.urls.path(
+    path(
         'search/',
-        genres.views.SearchView.as_view(),
+        SearchView.as_view(),
         name='search',
     ),
 ]

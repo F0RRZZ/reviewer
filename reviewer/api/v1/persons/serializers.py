@@ -1,28 +1,28 @@
-import rest_framework.serializers
+from rest_framework.serializers import ModelSerializer
 
-import api.v1.genres.serializers
-import api.v1.roles.serializers
-import persons.models
+from api.v1.genres.serializers import GenreSerializer
+from api.v1.roles.serializers import RoleSerializer
+from persons.models import Person
 
 
-class PersonSerializer(rest_framework.serializers.ModelSerializer):
-    genres = api.v1.genres.serializers.GenreSerializer(
+class PersonSerializer(ModelSerializer):
+    genres = GenreSerializer(
         many=True,
         read_only=True,
     )
-    career = api.v1.roles.serializers.RoleSerializer(
+    career = RoleSerializer(
         many=True,
         read_only=True,
     )
 
     class Meta:
-        model = persons.models.Person
+        model = Person
         fields = (
-            persons.models.Person.name.field.name,
-            persons.models.Person.surname.field.name,
-            persons.models.Person.career.field.name,
-            persons.models.Person.height.field.name,
-            persons.models.Person.date_of_birth.field.name,
-            persons.models.Person.place_of_birth.field.name,
-            persons.models.Person.genres.field.name,
+            Person.name.field.name,
+            Person.surname.field.name,
+            Person.career.field.name,
+            Person.height.field.name,
+            Person.date_of_birth.field.name,
+            Person.place_of_birth.field.name,
+            Person.genres.field.name,
         )

@@ -1,44 +1,36 @@
-import django.conf
-import django.conf.urls.static
-import django.contrib.admin
-import django.urls
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.admin import site
+from django.urls import include, path
 
 urlpatterns = [
-    django.urls.path('', django.urls.include('feeds.urls', namespace='feeds')),
-    django.urls.path(
-        'genres/', django.urls.include('genres.urls', namespace='genres')
-    ),
-    django.urls.path(
-        'movies/', django.urls.include('movies.urls', namespace='movies')
-    ),
-    django.urls.path(
-        'person/', django.urls.include('persons.urls', namespace='persons')
-    ),
-    django.urls.path(
-        'user/', django.urls.include('users.urls', namespace='users')
-    ),
-    django.urls.path(
+    path('', include('feeds.urls', namespace='feeds')),
+    path('genres/', include('genres.urls', namespace='genres')),
+    path('movies/', include('movies.urls', namespace='movies')),
+    path('person/', include('persons.urls', namespace='persons')),
+    path('user/', include('users.urls', namespace='users')),
+    path(
         'user/',
-        django.urls.include('django.contrib.auth.urls'),
+        include('django.contrib.auth.urls'),
     ),
-    django.urls.path(
+    path(
         'api/v1/',
-        django.urls.include('api.urls'),
+        include('api.urls'),
     ),
-    django.urls.path('admin/', django.contrib.admin.site.urls),
+    path('admin/', site.urls),
 ] + (
-    django.conf.urls.static.static(
-        django.conf.settings.MEDIA_URL,
-        document_root=django.conf.settings.MEDIA_ROOT,
+    static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT,
     )
 )
 
-if django.conf.settings.DEBUG:
+if settings.DEBUG:
     import debug_toolbar
 
     urlpatterns += [
-        django.urls.path(
+        path(
             '__debug__/',
-            django.urls.include(debug_toolbar.urls),
+            include(debug_toolbar.urls),
         )
     ]

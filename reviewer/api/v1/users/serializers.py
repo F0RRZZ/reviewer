@@ -1,23 +1,23 @@
-import rest_framework.serializers
+from rest_framework.serializers import ModelSerializer
 
-import api.v1.reviews.serializers
-import users.models
+from api.v1.reviews.serializers import ReviewSerializerForUsers
+from users.models import User
 
 
-class UserSerializer(rest_framework.serializers.ModelSerializer):
-    users_reviews = api.v1.reviews.serializers.ReviewSerializerForUsers(
+class UserSerializer(ModelSerializer):
+    users_reviews = ReviewSerializerForUsers(
         many=True,
         read_only=True,
     )
 
     class Meta:
-        model = users.models.User
+        model = User
         fields = (
             'id',
-            users.models.User.username.field.name,
-            users.models.User.email.field.name,
-            users.models.User.bio.field.name,
-            users.models.User.date_joined.field.name,
-            users.models.User.is_staff.field.name,
+            User.username.field.name,
+            User.email.field.name,
+            User.bio.field.name,
+            User.date_joined.field.name,
+            User.is_staff.field.name,
             'users_reviews',
         )

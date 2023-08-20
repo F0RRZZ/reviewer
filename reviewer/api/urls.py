@@ -1,31 +1,31 @@
-import django.urls
+from django.urls import include, path
 
-import api.v1.genres.routers
-import api.v1.movies.routers
-import api.v1.persons.routers
-import api.v1.roles.routers
-import api.v1.users.routers
+from api.v1.genres.routers import router as genres_router
+from api.v1.movies.routers import router as movies_router
+from api.v1.persons.routers import router as persons_router
+from api.v1.roles.routers import router as roles_router
+from api.v1.users.routers import router as users_router
 
 app_name = 'api'
 urlpatterns = [
-    django.urls.path(
+    path(
         '',
-        django.urls.include(api.v1.users.routers.router.urls),
+        include(users_router.urls),
     ),
-    django.urls.path(
+    path(
         '',
-        django.urls.include(api.v1.movies.routers.router.urls),
+        include(movies_router.urls),
     ),
-    django.urls.path(
+    path(
         '',
-        django.urls.include(api.v1.persons.routers.router.urls),
+        include(persons_router.urls),
     ),
-    django.urls.path(
+    path(
         '',
-        django.urls.include(api.v1.roles.routers.router.urls),
+        include(roles_router.urls),
     ),
-    django.urls.path(
+    path(
         '',
-        django.urls.include(api.v1.genres.routers.router.urls),
+        include(genres_router.urls),
     ),
 ]

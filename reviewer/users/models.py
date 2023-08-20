@@ -1,11 +1,11 @@
-import django.contrib.auth.models
-import django.db.models
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
+from django.db import models
 
-import core.mixins
-import users.managers
+from core.mixins import ImageMixin
+from users.managers import UserManager
 
 
-class NormalizedEmailField(django.db.models.EmailField):
+class NormalizedEmailField(models.EmailField):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
@@ -28,20 +28,16 @@ class NormalizedEmailField(django.db.models.EmailField):
         return value
 
 
-class User(
-    django.contrib.auth.models.AbstractBaseUser,
-    django.contrib.auth.models.PermissionsMixin,
-    core.mixins.ImageMixin,
-):
+class User(AbstractBaseUser, PermissionsMixin, ImageMixin):
     DEFAULT_IMAGE = 'images/default_avatar.png'
 
-    username = django.db.models.CharField(
+    username = models.CharField(
         'username',
         max_length=50,
         help_text='Maximum of 50 symbols',
         unique=True,
     )
-    bio = django.db.models.TextField(
+    bio = models.TextField(
         'bio',
         max_length=500,
         help_text='Maximum of 500 symbols',
@@ -49,7 +45,7 @@ class User(
         null=True,
         blank=True,
     )
-    email = django.db.models.EmailField(
+    email = models.EmailField(
         'email',
         unique=True,
     )
@@ -58,32 +54,32 @@ class User(
         unique=True,
     )
 
-    objects = users.managers.UserManager()
-
     def get_image_path(self, filename: str) -> str:
         return f'avatars/user_{self.id}/{filename}'
 
-    image = django.db.models.ImageField(
+    image = models.ImageField(
         'avatar',
         upload_to=get_image_path,
         default=DEFAULT_IMAGE,
     )
-    date_joined = django.db.models.DateTimeField(
+    date_joined = models.DateTimeField(
         'date_joined',
         auto_now=True,
     )
-    is_active = django.db.models.BooleanField(
+    is_active = models.BooleanField(
         'active',
         default=False,
     )
-    is_staff = django.db.models.BooleanField(
+    is_staff = models.BooleanField(
         'staff',
         default=False,
     )
-    is_superuser = django.db.models.BooleanField(
+    is_superuser = models.BooleanField(
         'superuser',
         default=False,
     )
+
+    objects = UserManager()
 
     EMAIL_FIELD = 'email'
     USERNAME_FIELD = 'username'

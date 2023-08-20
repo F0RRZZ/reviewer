@@ -1,11 +1,11 @@
-import rest_framework.viewsets
+from rest_framework.viewsets import ModelViewSet
 
-import api.v1.roles.serializers
-import core.api.permissions
-import roles.models
+from api.v1.roles.serializers import RoleSerializer
+from core.api.permissions import IsAdminOrReadOnly
+from roles.models import Role
 
 
-class RoleViewSet(rest_framework.viewsets.ModelViewSet):
-    queryset = roles.models.Role.objects.all()
-    serializer_class = api.v1.roles.serializers.RoleSerializer
-    permission_classes = (core.api.permissions.IsAdminOrReadOnly,)
+class RoleViewSet(ModelViewSet):
+    queryset = Role.objects.all()
+    serializer_class = RoleSerializer
+    permission_classes = (IsAdminOrReadOnly,)

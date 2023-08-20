@@ -1,65 +1,65 @@
-import django.core.validators
-import django.db.models
+from django.core.validators import MaxValueValidator, MinValueValidator
+from django.db import models
 
-import movies.models
-import rating.managers
-import users.models
+from movies.models import Movie
+from rating.managers import RatingManager
+from users.models import User
 
 
-class Rating(django.db.models.Model):
+class Rating(models.Model):
     class ScoreData:
         DEFAULT = 5
         MIN = 1
         MAX = 10
         VALIDATORS = [
-            django.core.validators.MinValueValidator(MIN),
-            django.core.validators.MaxValueValidator(MAX),
+            MinValueValidator(MIN),
+            MaxValueValidator(MAX),
         ]
 
-    movie = django.db.models.ForeignKey(
-        movies.models.Movie,
-        on_delete=django.db.models.CASCADE,
+    movie = models.ForeignKey(
+        Movie,
+        on_delete=models.CASCADE,
         related_name='movies_reviews',
     )
-    user = django.db.models.ForeignKey(
-        users.models.User,
-        on_delete=django.db.models.CASCADE,
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
         related_name='users_reviews',
     )
-    story = django.db.models.PositiveSmallIntegerField(
+    story = models.PositiveSmallIntegerField(
         default=ScoreData.DEFAULT,
         validators=ScoreData.VALIDATORS,
     )
-    acting = django.db.models.PositiveSmallIntegerField(
+    acting = models.PositiveSmallIntegerField(
         default=ScoreData.DEFAULT,
         validators=ScoreData.VALIDATORS,
     )
-    music = django.db.models.PositiveSmallIntegerField(
+    music = models.PositiveSmallIntegerField(
         default=ScoreData.DEFAULT,
         validators=ScoreData.VALIDATORS,
     )
-    visual = django.db.models.PositiveSmallIntegerField(
+    visual = models.PositiveSmallIntegerField(
         default=ScoreData.DEFAULT,
         validators=ScoreData.VALIDATORS,
     )
-    final = django.db.models.PositiveSmallIntegerField(
+    final = models.PositiveSmallIntegerField(
         default=ScoreData.DEFAULT,
         validators=ScoreData.VALIDATORS,
     )
-    total_rating = django.db.models.PositiveSmallIntegerField('total_rating')
-    comment = django.db.models.TextField(
+    total_rating = models.PositiveSmallIntegerField('total_rating')
+    comment = models.TextField(
         'comment',
         max_length=1000,
         help_text='Maximum of 1000 symbols',
         null=True,
     )
-    created_at = django.db.models.DateTimeField(
+    created_at = models.DateTimeField(
         'created_at',
         auto_now_add=True,
         null=True,
     )
 
-    objects = rating.managers.RatingManager()
+    objects = RatingManager()
 
     class Meta:
         verbose_name = 'rating'

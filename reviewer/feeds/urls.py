@@ -1,32 +1,32 @@
-import django.urls
+from django.urls import path
 
-import feeds.views
+from feeds import views
 
 app_name = 'feeds'
 urlpatterns = [
-    django.urls.path(
+    path(
         '',
-        feeds.views.NewMoviesView.as_view(),
+        views.NewMoviesView.as_view(),
         name='new',
     ),
-    django.urls.path(
+    path(
         'new/',
-        feeds.views.NewMoviesView.as_view(),
+        views.NewMoviesView.as_view(),
         name='new',
     ),
-    django.urls.path(
+    path(
         'recently_added/',
-        feeds.views.RecentlyAddedMoviesView.as_view(),
+        views.RecentlyAddedMoviesView.as_view(),
         name='recently_added',
     ),
-    django.urls.path(
+    path(
         'best/',
-        feeds.views.BestMoviesView.as_view(),
+        views.BestMoviesView.as_view(),
         name='best',
     ),
-    django.urls.path(
+    path(
         'search/',
-        feeds.views.SearchView.as_view(),
+        views.SearchView.as_view(),
         name='search',
     ),
 ]

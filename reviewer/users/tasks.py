@@ -1,17 +1,17 @@
-import django.conf
-import django.core.mail
+from django.conf import settings
+from django.core.mail import send_mail
 
-import reviewer.celery
+from reviewer.celery import app
 
 
-@reviewer.celery.app.task
+@app.task
 def send_email(username: str, email: str, absolute_uri: str):
-    django.core.mail.send_mail(
+    send_mail(
         'Подтверждение регистрации',
         f'Здравствуйте, {username}!\n'
         f'Для активации аккаунта необходимо перейти'
         f'по ссылке: {absolute_uri}',
-        django.conf.settings.EMAIL,
+        settings.EMAIL,
         [email],
         fail_silently=False,
     )

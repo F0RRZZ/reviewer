@@ -1,14 +1,14 @@
-import django.views.generic
+from django.views.generic import DetailView
 
-import persons.models
+from persons.models import Person
 
 
-class PersonDetailView(django.views.generic.DetailView):
+class PersonDetailView(DetailView):
     context_object_name = 'person'
     pk_url_kwarg = 'person_id'
-    model = persons.models.Person
-    queryset = persons.models.Person.objects.prefetch_related(
-        persons.models.Person.career.field.name,
-        persons.models.Person.genres.field.name,
+    model = Person
+    queryset = Person.objects.prefetch_related(
+        Person.career.field.name,
+        Person.genres.field.name,
     )
     template_name = 'persons/person_detail.html'
